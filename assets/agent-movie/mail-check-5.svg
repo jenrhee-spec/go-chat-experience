@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="25.3831" height="25.3831" viewBox="0 0 25.3831 25.3831" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="check_box_outline_blank">
+<mask id="mask0_0_210" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="26" height="26">
+<rect id="Bounding box" width="25.3831" height="25.3831" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_0_210)">
+<path id="check_box_outline_blank_2" d="M5.70978 21.5738C5.18626 21.5738 4.73809 21.3874 4.36527 21.0146C3.99246 20.6418 3.80605 20.1936 3.80605 19.6701V5.70937C3.80605 5.18585 3.99246 4.73768 4.36527 4.36486C4.73809 3.99205 5.18626 3.80564 5.70978 3.80564H19.6705C20.194 3.80564 20.6422 3.99205 21.015 4.36486C21.3878 4.73768 21.5742 5.18585 21.5742 5.70937V19.6701C21.5742 20.1936 21.3878 20.6418 21.015 21.0146C20.6422 21.3874 20.194 21.5738 19.6705 21.5738H5.70978ZM5.70978 19.6701H19.6705V5.70937H5.70978V19.6701Z" fill="#BABEC2"/>
+</g>
+</g>
+</svg>

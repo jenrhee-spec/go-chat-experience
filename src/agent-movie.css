@@ -1,0 +1,193 @@
+.agents-movie-screen .copy{left:93px;top:91px;width:455px}
+.agents-movie-screen .copy h1{font:400 28px/35px 'Go Sans',sans-serif}
+.agents-movie{position:absolute;left:603px;top:61px;width:600px;height:572px;border-radius:20px;overflow:hidden;background:#493ec5;color:white;font:300 22.138px/1.5 'Go Sans',sans-serif;isolation:isolate;box-shadow:0 1px 4px #1414130f}
+.agents-movie-tonal{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.agents-movie-warm{position:absolute;left:-852px;top:0;width:2555px;height:1089px;max-width:none;transform:scaleY(-1)}
+.agents-movie-dark{position:absolute;left:-818px;top:-849px;width:3156px;height:2271px;max-width:none;object-fit:cover}
+.agents-movie-field{position:absolute;inset:0;opacity:1;transition:opacity 650ms ease}
+.agents-movie[data-phase=selected] .agents-movie-field,.agents-movie[data-phase=document] .agents-movie-field{opacity:0}
+.agents-movie-orb{width:101px;height:101px;display:grid;place-items:center;position:relative;flex:none;border:5.2px solid #ffffff33;border-radius:63px;background:white;background-clip:padding-box}
+.agents-movie-orb>img{grid-area:1/1;max-width:none}
+.agents-movie-extra{position:absolute;opacity:.1}
+.agents-movie-extra img{transform:scale(1.21)}
+.agents-movie-chosen{position:absolute;left:256px;top:114px;display:flex;flex-direction:column;gap:13px;transition:transform 1100ms cubic-bezier(.22,1,.36,1)}
+.agents-movie[data-phase=selected] .agents-movie-chosen{transform:translateY(12px)}
+
+.agents-movie-secondary{transition:opacity 900ms ease}
+.agents-movie[data-phase=document] .agents-movie-secondary{opacity:.1}
+.agents-movie-cap,.agents-movie-heart{transition:opacity 900ms ease}
+.agents-movie-heart{opacity:0}
+.agents-movie:not([data-phase=field]) .agents-movie-heart{opacity:1}
+.agents-movie:not([data-phase=field]) .agents-movie-cap{opacity:0}
+.agents-movie-document{position:absolute;left:136px;top:44px;width:591px;height:531px;padding:32px 24px 0 32px;border:1.2px solid white;border-radius:11px;background:#ffffff1a;opacity:0;transform:translateX(35px);transition:opacity 800ms ease 200ms,transform 1100ms cubic-bezier(.22,1,.36,1) 200ms}
+.agents-movie[data-phase=document] .agents-movie-document{opacity:1;transform:none}
+.agents-movie-document header{height:57px;display:flex;align-items:flex-start;gap:6.4px;white-space:nowrap}
+.agents-movie-document header>img{width:46.192px;height:47.367px;opacity:1}
+.agents-movie-document h2{font:400 22.138px/1 'Go Sans',sans-serif;margin:15.79px 0 0}
+.agents-movie-share{position:absolute;top:38.58px;left:437.25px;padding:9.21px 14.473px;background:#ffffff80;border-radius:263px;font:400 19.891px/1 'Go Sans',sans-serif}
+.agents-movie-document p{margin:0}
+.agents-movie-muted{opacity:.3;width:522px}
+.agents-movie-feature{height:35px;line-height:1}
+.agents-movie-sentence{position:relative;min-height:33px;white-space:nowrap}
+.agents-movie-sentence>img{position:absolute;left:0;bottom:0}
+.agents-movie-sentence[data-writing=true]{background:linear-gradient(90deg,#ddd0ff26,transparent);border-radius:3px}
+.agents-movie-caret{display:none;width:2px;height:22px;background:#fff;vertical-align:-3px;margin-left:2px}
+.agents-movie-sentence[data-writing=true]:not([data-done=true]) .agents-movie-caret{display:inline-block}
+.agents-movie-sentence[data-done=true]>img{opacity:0;transition:opacity 500ms ease}
+.agents-movie-writing{position:absolute;left:32px;top:436px;font:300 15px/22px 'Go Sans',sans-serif;opacity:0;transition:opacity 350ms ease;white-space:nowrap}
+.agents-movie-writing[data-visible=true]{opacity:.85}
+@media(prefers-reduced-motion:reduce){.agents-movie *{transition:none!important}}
+
+.agents-movie-screen{background:#fcfaf8}
+.agents-movie-document header>img{object-fit:contain;object-position:center}
+.agents-movie[data-art-ready=false] .agents-movie-tonal{visibility:hidden}
+
+.agents-movie-icon-camera{position:absolute;inset:0;transform-origin:300px 286px;will-change:transform}
+.agents-movie-chosen>div{width:101px;height:101px;flex:none;translate:0 0;transition:translate 1100ms cubic-bezier(.22,1,.36,1)}
+/* Move each agent independently; inactive agents fade at their field positions. */
+.agents-movie:is([data-phase=document],[data-phase=email],[data-phase=slack]) .agents-movie-writer-position,
+.agents-movie:is([data-phase=email],[data-phase=slack]) .agents-movie-email-position,
+.agents-movie[data-phase=slack] .agents-movie-flag-position{translate:-204px -76px}
+/* Each example keeps only its working agent visible. */
+.agents-movie-chosen .agents-movie-orb{opacity:.1;transition:opacity 1000ms ease}
+.agents-movie[data-phase=selected] .agents-movie-chosen .agents-movie-orb{opacity:1}
+.agents-movie[data-phase=document] .agents-movie-writer{opacity:1}
+.agents-movie[data-phase=document] .agents-movie-secondary{opacity:.1}
+
+/* The next specialist takes over in Gmail; labels arrive from top to bottom. */
+.agents-movie[data-phase=email] .agents-movie-field{opacity:0}
+
+.agents-movie[data-phase=email] .agents-movie-chosen .agents-movie-orb{opacity:.1}
+.agents-movie[data-phase=email] .agents-movie-chosen .agents-movie-email-agent{opacity:1}
+.agents-movie[data-phase=email] .agents-movie-document{opacity:0;transform:translateY(-18px);transition:opacity 420ms ease,transform 650ms cubic-bezier(.22,1,.36,1)}
+.agents-movie-email{position:absolute;left:141px;top:32px;width:768.29px;height:467px;padding:0 24.264px;border:1.155px solid white;border-radius:10.592px;background:#ffffff1a;overflow:hidden;opacity:0;transform:translateY(22px);transition:opacity 650ms ease 200ms,transform 850ms cubic-bezier(.22,1,.36,1) 200ms;font:300 17.804px/25.383px 'Go Sans',sans-serif}
+.agents-movie[data-phase=email] .agents-movie-email{opacity:1;transform:none}
+.agents-movie-email header{height:64.143px;width:766.865px;display:flex;align-items:center;gap:9.803px;border-bottom:1.225px solid #0000001f}
+.movie-gmail-brand{width:205.258px;flex:none;padding-left:29.41px;display:flex;align-items:center}
+.movie-gmail-brand>img:last-child{width:73.512px;height:24.504px;object-fit:fill;object-position:bottom}
+.movie-mail-search{width:490.337px;height:41.337px;border-radius:100px;display:flex;align-items:center;gap:10px;padding-left:15.13px;background:#f3f4f8;opacity:.5;color:#3c3e3d;font-size:15.93px}
+.movie-mail-rows{margin-top:3.852px;width:766.921px}
+.movie-mail-row{height:67.106px;display:flex;align-items:center;gap:16.434px;border-bottom:1.225px solid #0000001f;padding:0 29.41px;white-space:nowrap}
+.movie-mail-sender{display:flex;gap:10.153px;align-items:center;flex:none}
+.movie-mail-sender>img{margin:5.077px;flex:none}
+.movie-mail-label{display:inline-block;flex:none;border-radius:4.902px;padding:0 7.5px;color:#141413;background:#f2f0eb;font:300 17.156px/25.733px 'Go Sans',sans-serif;transform-origin:left center}
+.movie-mail-label.respond{background:#ffdcf3}
+.movie-mail-label.waiting{background:#daedfb;padding-inline:18px}
+.movie-mail-label.fyi{background:#fef1bb}
+.movie-mail-subject{color:#a1a1aa;white-space:nowrap}
+
+/* The actual agent travels with its cursor to the content it is changing. */
+.agents-movie-chosen{z-index:3}
+.agents-movie-chosen .agents-movie-orb{transform-origin:0 0;transition:opacity 1000ms ease,transform 850ms cubic-bezier(.22,1,.36,1)}
+.agents-movie[data-writer-action=true] .agents-movie-writer{transform:translate(-12px,94px)}
+.agents-movie[data-email-action=true] .agents-movie-email-agent{transform:translate(-13px,var(--email-action-y));transition:opacity 500ms ease,transform 280ms cubic-bezier(.22,1,.36,1)}
+ .agents-action-cursor{position:absolute;right:-23px;top:28px;width:32px;height:39px;opacity:0;transform:rotate(65deg);transform-origin:center;transition:opacity 220ms ease;filter:drop-shadow(0 2px 3px #201a2a66)}
+.agents-action-cursor::before,.agents-action-cursor::after{content:'';position:absolute;inset:0;background:white;clip-path:polygon(0 0,100% 57%,60% 63%,39% 100%)}
+.agents-action-cursor::after{inset:5px 5px 6px 4px;background:#201a2a}
+.agents-movie[data-writer-action=true] .agents-movie-writer .agents-action-cursor,.agents-movie[data-email-action=true] .agents-movie-email-agent .agents-action-cursor{opacity:1}
+.agents-movie-icon-camera{z-index:3;pointer-events:none}
+
+/* Clock-driven highlighting keeps the waterfall in sync with playback. */
+.agents-movie[data-phase=selected] .agents-movie-chosen .agents-movie-orb{transition:transform 850ms cubic-bezier(.22,1,.36,1)}
+.agents-movie-controls{position:absolute;left:24px;right:20px;bottom:12px;display:flex;justify-content:flex-start;gap:12px;align-items:center;z-index:5}
+.agents-movie-controls button{border:0;background:transparent;color:white;cursor:pointer;font:400 15px/22px 'Go Sans',sans-serif;padding:10px 0}
+.agents-movie-controls .agents-movie-replay{opacity:1;transition:opacity 150ms ease}
+.agents-movie-controls .agents-movie-replay:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+.agents-movie-controls .agents-movie-pause{width:40px;height:40px;padding:8px;border-radius:50%;display:grid;place-items:center}
+.agents-movie-pause:hover{background:#ffffff1a}
+.agents-movie-pause svg{width:24px;height:24px;fill:currentColor}
+.agents-movie-controls button:focus-visible{outline:2px solid white;outline-offset:3px}
+
+/* A third specialist follows the work into Slack. */
+.agents-movie-flag-agent>svg{width:48px;height:48px;color:var(--origin-mulberry-100,#421d24)}
+.agents-movie[data-phase=slack] .agents-movie-field{opacity:0}
+
+.agents-movie[data-flag-action=true] .agents-movie-flag-agent{transform:translate(-20px,-22px)}
+.agents-movie[data-flag-action=true] .agents-movie-flag-agent .agents-action-cursor{opacity:1}
+.agents-movie-email-caption{position:absolute;left:141px;top:516px;margin:0;font:300 15px/22px 'Go Sans',sans-serif;opacity:0;transition:opacity 350ms ease;pointer-events:none}
+.agents-movie[data-phase=email] .agents-movie-email-caption{opacity:.85}
+.agents-movie-slack{position:absolute;left:136px;top:40px;width:560px;height:475px;border:1.113px solid #ffffffcc;border-radius:26.72px;background:#ffffffe0;box-shadow:0 17.813px 35.627px #857dfa26;color:#292827;padding:24px 28px;opacity:0;transform:translateY(22px);transition:opacity 650ms ease,transform 850ms cubic-bezier(.22,1,.36,1);font:300 20px/1.4 'Go Sans',sans-serif}
+.agents-movie[data-phase=slack] .agents-movie-slack{opacity:1;transform:none}
+.agents-movie-slack header{font-size:17px;color:#73716d;padding-bottom:22px}
+.movie-slack-message{display:flex;gap:14px;margin-bottom:24px}
+.movie-slack-message.muted{opacity:.5}
+.movie-slack-message strong{font-weight:500;font-size:21.862px}
+.movie-slack-message p{margin:5px 0 0;max-width:345px}
+.movie-slack-avatar{position:relative;overflow:hidden;width:54.446px;height:54.446px;flex:none;border-radius:16.334px;background:linear-gradient(#8dcaf2,#d5f7eb)}
+.movie-slack-avatar img{position:absolute;width:133.627px;height:200.508px;left:-45px;top:-30px;object-fit:cover;transform:rotate(-11.06deg)}
+.movie-slack-avatar.daniel{background:linear-gradient(#fdc298,#f2f0eb)}
+.movie-slack-avatar.daniel img{width:164px;height:109.674px;left:-55px;top:-14px;transform:none}
+.movie-slack-highlight{position:relative;background:rgba(224,208,254,calc(var(--underline-progress)*.65))}
+.movie-slack-highlight::after{content:'';position:absolute;left:0;right:0;bottom:-3px;height:2px;background:#8b5ed0;transform:scaleX(var(--underline-progress));transform-origin:left}
+.movie-slack-compose{position:absolute;left:28px;right:28px;bottom:24px;height:104.653px;border:1.392px solid #dfe5ef;border-radius:22.267px;background:#ffffff80;color:#d2d9e9;padding:16px 18px;font-size:17.513px}
+.movie-slack-compose>div{position:absolute;left:16px;bottom:14px;display:flex;gap:8px}
+.movie-slack-compose aside{position:absolute;right:18px;top:22px;display:flex;align-items:center;gap:16px}
+.movie-coach-suggestion{position:absolute;left:151px;top:330px;width:340px;scale:1.25;transform-origin:top left;padding:16px 18px;border:1px solid #edebe5;border-radius:18px;background:#fffffff5;box-shadow:0 12px 28px #22174226;z-index:4;color:#292827;pointer-events:none;font:300 15px/21px 'Go Sans',sans-serif}
+.movie-coach-suggestion h3{margin:0 0 8px;color:#73716d;font:400 14px/20px 'Go Sans',sans-serif}
+.movie-coach-suggestion p{margin:0}
+.movie-coach-example{margin-top:10px;padding-top:10px;border-top:1px solid #edebe5;font-size:14px;line-height:20px}
+
+/* Return to the wider field of agents before looping. */
+.agents-movie[data-phase=ending] .agents-movie-field,.agents-movie[data-phase=reset] .agents-movie-field{opacity:0}
+/* Restore the inactive agents in place while the flag makes the final return. */
+.agents-movie[data-phase=ending] :is(.agents-movie-writer-position,.agents-movie-email-position){transition:none}
+.agents-movie[data-phase=ending] :is(.agents-movie-writer,.agents-movie-email-agent){transition:opacity 400ms ease}
+.agents-movie[data-phase=ending] .agents-movie-chosen,.agents-movie[data-phase=reset] .agents-movie-chosen{transform:none}
+.agents-movie-icon-camera{transition:opacity 800ms ease}
+.agents-movie[data-phase=reset] .agents-movie-icon-camera{opacity:0}
+
+.agents-movie-flag-agent>svg path{fill:var(--origin-mulberry-100,#421d24)}
+.agents-movie[data-phase=ending] .agents-movie-field{opacity:.5}
+
+/* Keep the concise feedback inside the familiar suggestion-card hierarchy. */
+.movie-coach-suggestion{padding:14px 16px 0;border:1px solid #eeece8;border-radius:18px;background:#fff;box-shadow:0 3px 8px #1414130a,0 12px 32px #22174224;overflow:hidden}
+.movie-coach-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px}
+.movie-coach-heading h3{font:400 12px/17px 'Go Sans',sans-serif;color:#8a8883;margin:0}
+.movie-coach-tools{display:flex;align-items:center;gap:10px;color:#a09e99;white-space:nowrap}
+.movie-coach-tools span:first-child{font:300 20px/17px 'Go Sans',sans-serif}
+.movie-coach-tools span:last-child{font:500 18px/17px 'Go Sans',sans-serif}
+.movie-coach-suggestion p{font:300 15px/21px 'Go Sans',sans-serif}
+.movie-coach-suggestion p strong{font-weight:500}
+.movie-coach-attribution{display:flex;align-items:center;gap:7px;margin:12px 0;font:400 12px/18px 'Go Sans',sans-serif;color:#8a8883}
+.movie-coach-attribution>span{width:18px;height:18px;display:grid;place-items:center;background:var(--origin-mulberry-100,#421d24);border-radius:4px}
+.movie-coach-attribution svg{width:12px;height:12px}
+.movie-coach-attribution svg path{fill:white}
+.movie-coach-footer{display:flex;align-items:center;gap:8px;margin:0 -16px;padding:12px 16px;border-top:1px solid #f0eeeb;background:#fcfaf8;color:#73716d;font:400 13px/18px 'Go Sans',sans-serif}
+.movie-coach-footer svg{width:16px;height:16px}
+.movie-coach-footer svg path{fill:#8a8883}
+
+/* A persistent mulberry fade keeps playback controls readable in every scene. */
+.agents-movie::after{content:'';position:absolute;inset:auto 0 0;height:84px;background:linear-gradient(to bottom,rgba(66,29,36,0),rgba(66,29,36,.88) 70%,#421d24);z-index:4;pointer-events:none}
+.agents-movie-controls .agents-movie-replay{min-height:44px;min-width:48px;text-align:left}
+.agents-movie-controls .agents-movie-pause{width:44px;height:44px}
+
+.movie-writer-suggestion{top:214px}
+.movie-writer-suggestion .movie-writer-avatar{background:#f0e8ff}
+.movie-writer-avatar img{width:14px;height:14px;object-fit:contain}
+.agents-movie-sentence .agents-movie-caret{display:none!important}
+
+/* Resolve the highlighted sentence into the accepted rewrite. */
+.movie-applied-text{animation:movie-rewrite-in 320ms ease-out both}
+@keyframes movie-rewrite-in{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.movie-applied-text{animation:none}}
+
+/* Share the movie clock so progress stops and resets with playback. */
+.agents-movie-controls{bottom:20px}
+.agents-movie-progress{position:absolute;left:24px;right:24px;bottom:12px;height:3px;border-radius:3px;background:rgba(255,255,255,.24);overflow:hidden;z-index:5;pointer-events:none}
+.agents-movie-progress>span{display:block;width:100%;height:100%;border-radius:inherit;background:rgba(255,255,255,.9);transform-origin:left center}
+
+/* After a brief introduction, expose controls on hover or keyboard focus. */
+.agents-movie-controls,.agents-movie-progress,.agents-movie::after{transition:opacity 220ms ease}
+.agents-movie[data-first-play=false]:not(:hover):not(:has(:focus-visible))::after,
+.agents-movie[data-first-play=false]:not(:hover):not(:has(:focus-visible)) .agents-movie-controls,
+.agents-movie[data-first-play=false]:not(:hover):not(:has(:focus-visible)) .agents-movie-progress{opacity:0;pointer-events:none}
+.agents-movie-controls{gap:4px}
+.agents-movie-controls .agents-movie-replay{width:44px;min-width:44px;height:44px;padding:10px;border-radius:50%;display:grid;place-items:center}
+.agents-movie-replay svg{width:24px;height:24px;fill:currentColor}
+.agents-movie-controls .agents-movie-replay:hover{background:#ffffff1a;text-decoration:none}
+@media(hover:none){.agents-movie[data-first-play=false]::after{opacity:1}.agents-movie[data-first-play=false] .agents-movie-controls,.agents-movie[data-first-play=false] .agents-movie-progress{opacity:1;pointer-events:auto}}
+
+.agents-movie-controls .agents-movie-replay svg,.agents-movie-controls .agents-movie-replay svg path{fill:#fff;color:#fff}
+
+/* Finish the return, then fade straight into the next opening. */
+.agents-movie[data-phase=reset] .agents-movie-icon-camera{transition:opacity 500ms ease}

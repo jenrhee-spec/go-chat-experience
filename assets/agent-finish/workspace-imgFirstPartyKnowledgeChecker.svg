@@ -1,0 +1,6 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="first-party-knowledge-checker">
+<ellipse id="aura" cx="10" cy="17.5" rx="8.00002" ry="2.50001" fill="#D4C7FF"/>
+<path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M10 1C14.9706 1 19 5.02945 19 10C19 14.9706 14.9706 19 10 19C5.02945 19 1 14.9706 1 10C1 5.02945 5.02945 1 10 1ZM10 2.50001C5.85788 2.50001 2.50001 5.85788 2.50001 10C2.50001 14.1422 5.85788 17.5 10 17.5C14.1422 17.5 17.5 14.1422 17.5 10H16C16 13.3137 13.3137 16 10 16C6.68631 16 4.00001 13.3137 4.00001 10C4.00001 6.68631 6.68631 4.00001 10 4.00001V2.50001ZM9.25002 10.9395L7.53029 9.21975L6.46974 10.2803L8.68557 12.4961H9.81448L14.5303 7.78029L13.4698 6.71974L9.25002 10.9395Z" fill="#421D24"/>
+</g>
+</svg>

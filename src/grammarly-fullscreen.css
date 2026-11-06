@@ -1,0 +1,48 @@
+/* Full-screen comparison: the Fall flow's generous canvas and centered hierarchy. */
+.ge-fullscreen.ge-welcome-modal{z-index:10;border:0;border-radius:0;box-shadow:none;background:#fcfaf8}
+.ge-fullscreen.ge-welcome-modal::backdrop{background:#fcfaf8}
+.ge-flow[data-layout=fullscreen]>.review{position:fixed;bottom:0;left:0;width:100%;height:44px;margin:0;background:#eeece8;z-index:5;justify-content:center}
+.ge-fullscreen .ge-modal-content>.gs-screen,.ge-fullscreen .wc-embedded,.ge-fullscreen .wc-destination,.ge-fullscreen .wc-embedded .wa-screen{width:100%;height:100%}
+.ge-fullscreen .gs-heading,.ge-fullscreen .wc-embedded .wa-heading{top:66px;width:640px}
+.ge-fullscreen .gs-heading h1,.ge-fullscreen .wa-heading h1{font-size:30px;line-height:38px}
+.ge-fullscreen .gs-connectors{top:50%;left:50%;transform:translate(-50%,-46%);width:700px}
+.ge-fullscreen .gs-profile-frame,.ge-fullscreen .gs-loading-card{top:50%;left:50%;transform:translate(-50%,-43%);width:789px;height:454px}
+.ge-fullscreen .gs-profile-scroll{grid-template-columns:155px minmax(0,1fr);gap:60px;padding:36px 44px}
+.ge-fullscreen .gs-profile-section p,.ge-fullscreen .gs-profile-section ul{max-width:none;font-size:16px;line-height:24px}
+.ge-fullscreen .gs-footer,.ge-fullscreen .wc-embedded .wa-actions{height:80px;bottom:0;align-items:flex-end;padding-bottom:24px;background:transparent;box-shadow:none}
+.ge-fullscreen .wc-embedded .wc-carousel{top:50%;transform:translateY(-43%);transform-origin:center}
+.ge-fullscreen .ge-personalizing{width:100%;height:100%}
+.ge-fullscreen .ge-personalizing>.screen{left:0;top:0;width:100%;height:100%;transform:none}
+.ge-fullscreen .ge-personalizing>.screen .figma-agents{width:100%;height:100%}
+.ge-fullscreen .ge-personalizing>.screen .figma-agents .agent-carousel{left:calc(50% - 287px)}
+.ge-fullscreen .ge-personalizing>.screen .figma-agents[data-ready=false]>.agent-tonal{left:0;top:0;width:100%;height:100%}
+.ge-fullscreen .ge-personalizing>.screen .figma-agents>.agent-tonal .agent-tonal-art{min-width:100%;min-height:100%}
+.ge-fullscreen.ge-welcome-modal .ge-modal-close{top:22px;right:24px}
+.ge-fullscreen.ge-welcome-modal .welcome-v2{width:100%;height:100%;border:0;border-radius:0;box-shadow:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;padding-bottom:112px;background:linear-gradient(180deg,#e8e0ff 0%,#fcfaf8 54%)}
+.ge-fullscreen.ge-welcome-modal .welcome-v2-hero{position:relative;inset:auto;height:auto;transform:none;display:flex;align-items:center;flex-direction:column;gap:20px}
+.ge-fullscreen.ge-welcome-modal .welcome-v2-logo{position:relative;left:auto;top:auto;margin-bottom:8px}
+.ge-fullscreen.ge-welcome-modal .welcome-v2-hero h1{position:static;transform:none;width:560px;font-size:48px;line-height:1.08}
+.ge-fullscreen.ge-welcome-modal .welcome-v2-hero>p{position:static;transform:none;width:620px;margin:0}
+.ge-fullscreen.ge-welcome-modal .welcome-v2-benefits{position:static;width:470px;gap:14px}
+.ge-fullscreen.ge-welcome-modal .welcome-v2-actions{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);animation:none;gap:8px}
+
+/* Browser chrome is part of this prototype; no real browser window is opened. */
+main.ge-flow[data-layout=fullscreen]{padding-top:94px}
+.ge-browser-chrome{position:absolute;inset:0 0 auto;height:78px;z-index:8;font:12px/18px Arial,sans-serif;color:#45464a;text-align:left}
+.ge-browser-tabs{height:40px;background:#e4e6eb;display:flex;align-items:flex-end;padding:6px 12px 0;gap:6px}
+.ge-browser-tab{display:flex;align-items:center;gap:9px;width:224px;height:34px;border:0;padding:0 12px;background:transparent;border-radius:10px 10px 0 0;font:inherit;color:inherit;text-align:left;white-space:nowrap}
+button.ge-browser-tab{cursor:pointer}
+.ge-browser-tab[data-active=true]{background:#fff}
+.ge-browser-tab>img{width:17px;height:17px;object-fit:contain}
+.ge-browser-tab>button{margin-left:auto;border:0;background:none;width:24px;height:24px;cursor:pointer;font:18px Arial;color:#63656b;border-radius:50%}
+.ge-browser-tab>button:hover{background:#e9eaed}
+.ge-doc-tab-icon{color:#4285f4;font-size:20px}
+.ge-browser-plus{font-size:22px;align-self:center;padding:0 8px}
+.ge-browser-address{display:flex;gap:20px;align-items:center;height:38px;padding:0 16px;background:#fff;border-bottom:1px solid #e6e7ea}
+.ge-browser-address>span{font-size:20px;color:#85868c}
+.ge-browser-address>div{display:flex;align-items:center;gap:10px;background:#f1f2f5;border-radius:18px;flex:1;height:28px;padding:0 12px;font-size:12px}
+.ge-browser-tab-new{animation:ge-tab-open 240ms cubic-bezier(.22,1,.36,1) both;transform-origin:left bottom}
+.ge-fullscreen[open] .ge-modal-content{animation:ge-tab-content 260ms ease-out both}
+@keyframes ge-tab-open{from{opacity:0;transform:translateX(-16px)}to{opacity:1;transform:none}}
+@keyframes ge-tab-content{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.ge-browser-tab-new,.ge-fullscreen[open] .ge-modal-content{animation:none}}

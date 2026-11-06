@@ -1,0 +1,63 @@
+
+.pa-starter-setup .pa-artifact h2{font-size:16px;line-height:24px;padding:0;font-weight:400}
+.pa-starter-setup h2:focus{outline:none}
+.pa-setup-hint{color:#73716d;margin:8px 0 14px!important;font-size:14px;line-height:21px}
+.pa-setup-options{display:flex;flex-direction:column;gap:4px;margin-top:12px}
+.pa-setup-option{display:flex;align-items:center;gap:10px;padding:10px 8px;border-radius:8px;cursor:pointer}
+.pa-setup-option:hover,.pa-setup-option:has(input:checked){background:#f7f4fd}
+.pa-setup-option input{width:16px;height:16px;margin:0;accent-color:#714cb6}
+.pa-setup-option>svg,.pa-setup-connection>svg,.pa-starter-setup header>svg{width:22px;height:22px;flex:none}
+.pa-setup-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-top:20px}
+.pa-setup-response{margin:20px 0 16px!important;font-size:14px;line-height:22px;animation:pa-appear .3s ease-out}
+.pa-setup-connection{display:flex;align-items:center;gap:12px;padding:16px 0;border-bottom:1px solid #edebe5}
+.pa-setup-connection>div{flex:1}.pa-setup-connection small{display:block;color:#73716d;font-size:12px;margin-top:3px}
+.pa-setup-connected{display:flex;align-items:center;gap:5px;font-size:12px;color:#73716d}.pa-setup-connected svg{width:16px;height:16px}
+@media(prefers-reduced-motion:reduce){.pa-setup-response{animation:none}}
+
+.pa-agent-explanation{font-size:14px;line-height:22px;color:#73716d;margin:0 0 20px!important}
+.pa-setup-complete{padding:20px 0;animation:pa-appear .3s ease-out}
+.pa-setup-complete h2{font:400 16px/24px 'Go Sans',sans-serif;margin:0 0 18px}
+.pa-setup-complete p{margin:0 0 16px;font-size:14px;line-height:22px}
+.pa-setup-complete strong{font-weight:400}
+@media(prefers-reduced-motion:reduce){.pa-setup-complete{animation:none}}
+
+.pa-setup-answer-summary{display:flex;align-items:center;justify-content:space-between;padding:12px 0;color:#73716d;border-bottom:1px solid #edebe5;font-size:13px}
+.pa-setup-chat-turn{margin-top:20px;scroll-margin:16px}
+.pa-setup-chat-turn .pa-setup-response{min-height:22px;animation:none}
+.pa-chat-caret{display:inline-block;width:2px;height:14px;background:#73716d;vertical-align:-2px;margin-left:2px}
+.pa-setup-chat-turn .pa-setup-complete{padding-top:0}
+
+/* Shared message rhythm and module padding across all setup turns. */
+.pa-welcome p,.pa-setup-chat-turn .pa-setup-response,.pa-setup-complete p{font:300 14px/22px 'Go Sans',sans-serif}
+.pa-welcome p{margin:0 0 20px}.pa-welcome p:last-child{margin-bottom:16px}
+.pa-starter-setup .pa-artifact{padding:16px;border-radius:16px}
+.pa-setup-chat-turn .pa-setup-response{margin:0 0 16px!important}
+.pa-starter-setup .pa-artifact>header{margin-bottom:12px}
+
+.pa-setup-other{display:flex;flex-direction:column;gap:8px;margin:12px 8px 0;font:300 14px/22px 'Go Sans',sans-serif;color:#73716d}
+.pa-setup-other input{width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #dedbd5;border-radius:8px;background:white;color:#141413;font:inherit}
+.pa-setup-other input:focus-visible{outline:2px solid #714cb6;outline-offset:2px}
+
+/* Compact question module from Go Core Chat, with an inline custom reply. */
+.pa-starter-setup .pa-questionnaire{padding:16px 8px;box-shadow:0 1px 4px #4745430d;border:1px solid #edebe5}
+.pa-starter-setup .pa-questionnaire .pa-question-header{display:flex;gap:8px;align-items:center;margin:0 8px 8px;color:#73716d;font:400 14px/21px 'Go Sans',sans-serif}
+.pa-starter-setup .pa-question-header>svg{width:20px;height:20px;flex:none}
+.pa-question-header nav{margin-left:auto;display:flex;align-items:center;gap:4px}
+.pa-question-header nav button{display:grid;place-items:center;width:24px;height:24px;padding:4px;border:0;background:transparent;color:inherit;border-radius:4px;cursor:pointer}
+.pa-question-header nav button:disabled{opacity:.35;cursor:default}
+.pa-question-header nav button svg{width:16px;height:16px}
+.pa-question-header nav button:focus-visible{outline:2px solid #714cb6}
+.pa-starter-setup .pa-questionnaire h2{margin:0 8px;font:500 14px/21px 'Go Sans',sans-serif}
+.pa-questionnaire .pa-setup-hint{margin:4px 8px 8px!important;font-size:14px;line-height:21px}
+.pa-questionnaire .pa-setup-options{gap:1px;margin:8px 0 0}
+.pa-questionnaire .pa-setup-option{position:relative;gap:8px;padding:6px 8px;min-height:32px;font:300 14px/21px 'Go Sans',sans-serif}
+.pa-questionnaire .pa-setup-option input{position:absolute;opacity:0;width:1px;height:1px}
+.pa-option-letter{display:grid;place-items:center;flex:none;width:20px;height:20px;border-radius:6px;background:#f2f0eb;color:#73716d;font:500 12px/18px 'Go Sans',sans-serif}
+.pa-questionnaire .pa-setup-option:has(input:checked) .pa-option-letter{background:#714cb6;color:white}
+.pa-questionnaire .pa-setup-option:has(input:focus-visible){outline:2px solid #714cb6;outline-offset:-2px}
+.pa-question-footer{display:flex;align-items:center;gap:8px;padding:4px 8px 0}
+.pa-inline-reply{display:flex;gap:8px;align-items:center;flex:1;min-width:0}
+.pa-inline-reply input{min-width:0;width:100%;padding:6px 0;border:0;background:transparent;color:#141413;font:300 14px/21px 'Go Sans',sans-serif}
+.pa-inline-reply input::placeholder{color:#73716d}
+.pa-inline-reply input:focus-visible{outline:none;box-shadow:0 2px #714cb6}
+.pa-question-footer .pa-setup-actions{margin:0;flex:none}

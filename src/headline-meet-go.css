@@ -1,0 +1,48 @@
+.headline-meet-content{position:absolute;left:50%;top:var(--flow-copy-y,91px);transform:translateX(-50%);width:520px;max-width:calc(100% - 186px)}
+.headline-meet-logo{position:relative;width:68.6px;height:68.6px;margin-bottom:32px;z-index:2;transform-origin:top left;animation:headline-go-correct 2000ms cubic-bezier(.45,0,.2,1) 4750ms both}
+.headline-go-tile{position:absolute;inset:0;border-radius:21.56px;background:#472028;animation:headline-tile-form 1800ms cubic-bezier(.22,1,.36,1) 6750ms both}
+.headline-meet-logo img{position:absolute;left:7.3px;top:7.3px;width:54px;height:54px;transform-origin:50% 65%}
+.headline-go-arrow{clip-path:inset(31% 0 0);animation:headline-arrow-land 1800ms cubic-bezier(.45,0,.2,1) 6750ms both}
+.headline-go-dot{clip-path:inset(0 0 70%);filter:brightness(0) invert(1);animation:headline-dot-finish 1800ms ease 6750ms both}
+/* Go appears only once the underline is visible, touches it, then flies home. */
+@keyframes headline-go-correct{
+ 0%{opacity:0;transform:translate(435px,250px)}
+ 15%{opacity:1}
+ 35%,55%{opacity:1;transform:translate(290px,166px)}
+ 100%{opacity:1;transform:translate(0,0)}
+}
+@keyframes headline-tile-form{0%,26%{opacity:0;transform:scale(.35)}44%,100%{opacity:1;transform:scale(1)}}
+@keyframes headline-arrow-land{
+ 0%,12%{transform:translate(0,0) rotate(-35deg);filter:brightness(1)}
+ 28%,45%{transform:translate(39px,41px) rotate(-35deg);filter:brightness(1)}
+ 65%{transform:translate(0,0) rotate(-35deg);filter:brightness(0) invert(1)}
+ 82%,100%{transform:translate(0,0) rotate(0deg);filter:brightness(0) invert(1)}
+}
+@keyframes headline-dot-finish{0%,77%{opacity:0;transform:translateY(3px) scale(.7)}91%,100%{opacity:1;transform:translateY(0) scale(1)}}
+.headline-meet-content h1{font:400 28px/35px 'Go Sans',sans-serif;letter-spacing:0;margin:0}
+.headline-meet-content h1 strong{display:inline;color:#141413;font-weight:400}
+.headline-meet-content h1>span{display:inline;color:#73716d}
+.headline-meet-content .motion-word{animation-duration:var(--flow-text-duration,420ms)}
+.headline-tone-demo{position:relative;display:grid}
+.headline-tone-original{position:relative;grid-area:1/1;justify-self:start;display:inline-block;white-space:nowrap;animation:headline-tone-out 180ms ease 5450ms both}
+.headline-tone-original::after{content:'';position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--origin-purple-40,#9e7be0);transform:scaleX(0);transform-origin:left;animation:headline-underline-in 300ms cubic-bezier(.22,1,.36,1) 3450ms forwards}
+.headline-tone-word{display:inline-block}
+.headline-tone-char{opacity:0;animation:headline-copy-arrive 80ms linear forwards}
+.headline-tone-final{position:relative;grid-area:1/1;opacity:0;animation:headline-copy-arrive 280ms ease 5600ms forwards}
+.headline-meet-action{margin-top:var(--flow-action-gap,32px);visibility:hidden;animation:headline-action-arrive 300ms ease-out 8600ms both}
+@keyframes headline-underline-in{to{transform:scaleX(1)}}
+@keyframes headline-tone-out{to{opacity:0}}
+@keyframes headline-copy-arrive{from{opacity:0}to{opacity:1}}
+@keyframes headline-action-arrive{0%{visibility:hidden;opacity:0}1%{visibility:visible;opacity:0}100%{visibility:visible;opacity:1}}
+@media(prefers-reduced-motion:reduce){
+ .headline-meet-logo,.headline-go-tile,.headline-go-arrow,.headline-go-dot,.headline-word,.headline-tone-char,.headline-tone-final,.headline-tone-original,.headline-meet-action{animation:none}
+ .headline-meet-logo,.headline-word,.headline-tone-final{opacity:1}
+ .headline-tone-original{visibility:hidden}
+ .headline-tone-original::after{animation:none}
+ .headline-go-arrow{filter:brightness(0) invert(1)}
+ .headline-meet-action{visibility:visible}
+}
+
+.headline-tone-original{isolation:isolate}
+.headline-tone-original::before{content:"";position:absolute;inset:1px 0 -2px;z-index:-1;border-radius:3px;background:var(--origin-purple-10,#e8e0ff);opacity:0;animation:headline-copy-arrive 300ms ease 3450ms forwards}
+@media(prefers-reduced-motion:reduce){.headline-tone-original::before{animation:none}}

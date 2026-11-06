@@ -1,0 +1,119 @@
+
+.connector-onboarding .copy{width:455px}.connector-onboarding .copy h1{font:400 28px/35px 'Go Sans',sans-serif}.connector-optional{margin-top:20px;color:#73716d;font:400 14px/21px 'Go Sans',sans-serif}.connector-panel{position:absolute;left:680px;top:82px;width:516px;padding:30px;background:#fff;border-radius:20px;box-shadow:var(--go-surface-shadow)}.connector-panel h2,.connector-panel h3{font:500 16px/24px 'Go Sans',sans-serif;color:var(--ink);margin:0}.connector-panel h2{margin-bottom:14px}.suggested-connector{display:flex;align-items:center;gap:14px;padding:18px 0}.suggested-connector+.suggested-connector{border-top:1px solid #eeebe6}.suggested-icon{width:68px;height:68px;border:1px solid #eeebe6;border-radius:16px;display:flex;align-items:center;justify-content:center;flex:none;background:#fcfaf7}.suggested-icon svg{width:40px;height:40px}.suggested-copy{flex:1;min-width:0}.suggested-copy p{margin:4px 0 0;font:400 14px/21px 'Go Sans',sans-serif;color:#73716d;max-width:225px}.suggested-connector button{flex:none;min-width:91px}.suggested-connector button,.suggested-connector button span,.connector-demo{font:400 14px/21px 'Go Sans',sans-serif!important}.connector-demo{margin:12px 0 0;color:#8a8580}
+
+.suggested-copy p{font-variation-settings:"wght" 400;color:var(--muted)}
+
+.connector-panel{max-height:650px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}.view-more-connectors{display:block;margin:12px auto 0;padding:10px 16px;border:0;border-radius:8px;background:transparent;color:var(--muted);font:400 14px/21px 'Go Sans',sans-serif}.view-more-connectors:hover{background:#f5f2ee;color:var(--ink)}.more-connectors{border-top:1px solid #eeebe6;margin-top:8px;padding-top:24px}.more-connectors h2{margin-bottom:0}
+
+/* Match the profile card surface and arrival. Ambient colors are shared in memory-profile.css. */
+.connector-onboarding .connector-panel{border-radius:16px;padding:32px;animation:memory-card-arrive 280ms cubic-bezier(.22,1,.36,1) both;transform-origin:50% 65%}
+@media(prefers-reduced-motion:reduce){.connector-onboarding .connector-panel{animation:none}}
+
+.connector-connected-status{display:flex;align-items:center;gap:5px;flex:none;color:var(--muted);font:400 14px/21px 'Go Sans',sans-serif}.connector-connected-status svg{width:16px;height:16px;color:#47785e}
+
+.connector-panel .workspace-connected{padding-top:0;padding-bottom:18px}.connector-panel .connector-suggestions-heading{margin:0;padding-top:24px;border-top:1px solid #eeebe6}
+
+.connector-profile-pill{position:absolute;left:680px;top:82px;height:52px;padding:8px 18px 8px 8px;display:flex;align-items:center;gap:10px;border:1px solid #ffffffd9;border-radius:26px;background:#fffefa;box-shadow:0 2px 8px #604f6810;color:var(--ink);font:400 16px/24px 'Go Sans',sans-serif;view-transition-name:go-profile}
+.connector-profile-pill img{border-radius:50%;object-fit:cover;flex:none}.connector-profile-pill:hover{background:#fff}.connector-onboarding .connector-panel{top:150px;max-height:562px}
+.memory-onboarding .memory-frame{view-transition-name:go-profile}
+::view-transition-group(go-profile){animation-duration:320ms;animation-timing-function:cubic-bezier(.22,1,.36,1)}
+::view-transition-old(go-profile){animation:profile-shrink-out 90ms ease-out both}
+::view-transition-new(go-profile){animation:profile-pill-in 180ms 100ms ease-out both}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+html:active-view-transition .screen{animation:none}
+html:active-view-transition .memory-frame{animation:none}
+html:active-view-transition .connector-panel{animation:memory-card-arrive 220ms 130ms ease-out both}
+@keyframes profile-shrink-out{to{opacity:0}}@keyframes profile-pill-in{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.connector-profile-pill,.memory-onboarding .memory-frame{view-transition-name:none}}
+
+.profile-facepile{display:flex;align-items:center;isolation:isolate}
+.profile-sphere{width:34px;height:34px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;flex:none;border:2px solid #fffefa;border-radius:50%;background:#fff;box-shadow:0 1px 3px #30243714}
+.profile-sphere+.profile-sphere{margin-left:-7px}
+.profile-sphere svg,.connector-profile-pill .profile-sphere:not(.profile-avatar) img{width:20px;height:20px;border-radius:0;object-fit:contain}
+.connector-profile-pill .profile-avatar img{width:30px;height:30px}
+.profile-sphere-added{animation:profile-sphere-appear 180ms ease-out both}
+@keyframes profile-sphere-appear{from{opacity:0;transform:translateY(3px) scale(.9)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.profile-sphere-added{animation:none}}
+
+.profile-sphere.is-illuminated{position:relative;z-index:2}
+.profile-sphere.is-illuminated::after{content:'';position:absolute;inset:-3px;border-radius:50%;pointer-events:none;border:1px solid rgba(155,119,214,.22);box-shadow:0 0 7px 2px rgba(178,144,230,.20),0 0 12px 3px rgba(250,191,153,.10);opacity:0;animation:profile-connection-glow 1100ms ease-out both}
+@keyframes profile-connection-glow{0%{opacity:0}18%,48%{opacity:1}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.profile-sphere.is-illuminated::after{animation-duration:700ms}}
+
+.profile-preview-anchor{position:absolute;left:680px;top:82px;z-index:5}
+.profile-preview-anchor .connector-profile-pill{position:relative;left:auto;top:auto}
+.connector-profile-preview{position:absolute;left:0;top:calc(100% + 10px);width:420px;box-sizing:border-box;padding:24px;background:#fffefa;border:1px solid #eeebe6;border-radius:18px;box-shadow:0 12px 40px #40334e24;max-height:490px;overflow-y:auto;animation:profile-preview-appear 140ms ease-out}
+.connector-profile-preview header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.connector-profile-preview header img{border-radius:50%}
+.connector-profile-preview h2{font:500 16px/24px 'Go Sans',sans-serif;margin:0;color:var(--ink)}
+.connector-profile-preview h3,.connector-profile-preview h4{font:500 14px/21px 'Go Sans',sans-serif;margin:0;color:var(--ink)}
+.connector-profile-preview p{font:400 14px/21px 'Go Sans',sans-serif;margin:4px 0 0;color:var(--muted)}
+.connector-profile-preview .profile-preview-overview{margin:0 0 20px}
+.connector-profile-preview ul{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:16px}
+.connector-profile-preview li{display:flex;gap:12px;align-items:flex-start}
+.connector-profile-preview li>svg,.connector-profile-preview li>img{width:20px;height:20px;flex:none;margin-top:2px;object-fit:contain}
+@keyframes profile-preview-appear{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.connector-profile-preview{animation:none}}
+
+/* Keep the profile as the result beneath the connection choices. */
+.connector-stack{position:absolute;left:680px;top:82px;width:516px;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.connector-onboarding .connector-stack .connector-panel{position:relative;left:auto;top:auto;width:100%;height:442px;max-height:442px;overflow-y:auto}
+.connector-stack .profile-preview-anchor{position:relative;left:auto;top:auto}
+.connector-stack .connector-profile-preview{top:auto;bottom:calc(100% + 10px)}
+
+.suggested-icon{width:48px;height:48px;border-radius:13px}.suggested-icon svg,.suggested-icon img{width:28px;height:28px}.suggested-copy p{max-width:none}
+
+.connector-recommendations-loading{border-top:1px solid #eeebe6;padding-top:18px}
+.connector-recommendations-loading>p{margin:0 0 8px;font:400 14px/21px 'Go Sans',sans-serif;color:var(--muted)}
+.connector-skeleton-row{display:flex;align-items:center;gap:14px;height:76px}
+.connector-skeleton-row i{width:48px;height:48px;flex:none;border-radius:13px;background:#efeeeb}
+.connector-skeleton-row>div{flex:1}
+.connector-skeleton-row b{width:38%;height:12px;margin-bottom:12px}
+.connector-skeleton-row span{width:76%;height:10px}
+
+/* Keep Google connection and continuation together in one setup column. */
+.google-connectors .connector-centered{position:absolute;left:80px;top:82px;width:620px;display:flex;flex-direction:column}
+.google-connectors .copy,.google-connectors .copy h1{position:static;width:620px}
+.google-connectors .copy h1{font-size:28px;line-height:35px}
+.google-connectors .connector-stack{position:static;width:620px;margin-top:32px}
+.google-connectors .connector-stack .connector-panel{position:static;width:100%;height:auto;max-height:none;overflow:visible;padding:8px 28px 24px;background:#fff;border-radius:20px;box-shadow:var(--go-surface-shadow)}
+.google-connectors .connector-list{display:block}
+.google-connectors .suggested-connector{display:flex;align-items:center;gap:16px;padding:20px 0}
+.google-connectors .suggested-connector+.suggested-connector{border-top:1px solid #eeebe6}
+.google-connectors .suggested-icon{width:48px;height:48px;border:0;border-radius:12px;background:#f8f7fa}
+.google-connectors .suggested-icon svg{width:28px;height:28px}
+.google-connectors .suggested-copy h3{font:400 20px/28px 'Go Sans',sans-serif}
+.google-connectors .suggested-copy p{font:400 16px/24px 'Go Sans',sans-serif;margin:2px 0 0}
+.google-connectors .google-connect-action{margin-top:8px;min-height:44px;display:flex;align-items:center;justify-content:center}
+.google-connectors .google-connect-action button{width:100%;min-height:44px;background:transparent!important;border:1px solid #7450b8!important;border-radius:12px;color:#7450b8!important;box-shadow:none!important}
+.google-connectors .google-connect-action button:hover{background:#7450b808!important}
+.google-connectors .connector-connected-status,.google-connectors .connector-connected-status svg,.google-connected-summary{color:#7450b8}
+.google-connected-summary{font:400 16px/24px 'Go Sans',sans-serif}
+.google-connectors .connector-centered>.actions{margin-top:24px;gap:16px}
+
+/* Narrow connection panel in the standard right column. */
+.google-connectors .connector-centered{position:static;width:auto}
+.google-connectors .copy{position:absolute;left:80px;top:82px;width:480px}
+.google-connectors .copy h1{width:480px}
+.google-connectors .connector-stack{position:absolute;left:724px;top:82px;width:440px;margin-top:0}
+.google-connectors .connector-stack .connector-panel{padding:4px 24px 20px}
+.google-connectors .suggested-connector{gap:12px;padding:20px 0}
+.google-connectors .suggested-icon{width:40px;height:40px;border-radius:10px}
+.google-connectors .suggested-icon svg{width:24px;height:24px}
+.google-connectors .suggested-copy h3,.google-connectors .suggested-copy p{font:400 16px/24px 'Go Sans',sans-serif}
+.google-connectors .connector-connected-status{font-size:14px}
+
+/* Center the composition while keeping all content left justified. */
+.google-connectors .connector-centered{position:absolute;left:50%;top:82px;transform:translateX(-50%);width:500px;display:flex;flex-direction:column}
+.google-connectors .copy,.google-connectors .copy h1{position:static;width:500px;text-align:left}
+.google-connectors .connector-stack{position:static;width:500px;margin-top:32px}
+.google-connectors .connector-centered>.actions{margin-top:24px;justify-content:flex-start}
+
+/* Individual connections, with a quiet shortcut for both. */
+.google-connectors .suggested-connector button{min-width:88px;min-height:36px;background:transparent!important;border:1px solid #7450b8!important;color:#7450b8!important;border-radius:10px;box-shadow:none!important}
+.google-connectors .suggested-connector button:hover{background:#7450b808!important}
+.google-connectors .connector-connected-status{min-width:88px;justify-content:center}
+.google-connectors .google-connect-action{justify-content:flex-end;margin-top:4px;min-height:36px}
+.google-connectors .google-connect-action button{width:auto;min-height:36px;border:0!important;padding:6px 0!important;background:transparent!important;font:400 14px/24px 'Go Sans',sans-serif}
+.google-connectors .google-connect-action button:hover{text-decoration:underline}
+.google-connectors .google-connected-summary{font-size:14px}

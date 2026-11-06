@@ -1,0 +1,11 @@
+.pa-email-artifact{box-sizing:border-box;width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:16px;background:var(--origin-color-background-base-default,#fff);border:1px solid rgba(222,219,213,.6);border-radius:16px;box-shadow:0 1px 4px rgba(20,20,19,.05);overflow:hidden;color:var(--origin-color-text-base-default,#141413);font-size:14px;line-height:21px}
+.pa-email-header,.pa-email-subject{box-sizing:border-box;width:100%;min-height:28px;display:flex;align-items:center;gap:12px}
+.pa-email-field-label{flex:none;color:var(--origin-color-text-base-subdued,#73716d)}
+.pa-email-recipient{height:26px;display:flex;align-items:center;gap:4px;padding-right:8px;border-radius:20px;white-space:nowrap}
+.pa-email-avatar{display:grid;place-items:center;width:18px;height:18px;flex:none;border-radius:50%;background:#ebe5f6;color:#60409e;font-size:9px;line-height:1;font-weight:500}
+.pa-email-body{width:100%;display:flex;flex-direction:column;gap:8px;padding-top:4px;line-height:23px;white-space:pre-wrap}
+.pa-email-body p{margin:0}
+.pa-email-footer{box-sizing:border-box;width:100%;min-height:32px;display:flex;align-items:center;justify-content:flex-start;gap:12px}
+.pa-email-actions{display:flex;align-items:center;justify-content:flex-start;gap:8px}
+.pa-email-footer button{height:32px;min-height:32px}
+@media(max-width:680px){.pa-email-artifact{padding:14px}}

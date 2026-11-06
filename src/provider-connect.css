@@ -1,0 +1,9 @@
+.provider-connect-screen{width:100%;height:100%;position:relative;display:flex;flex-direction:column;background:var(--flow-page,#fcfaf8);color:#141413;font-family:'Go Sans',sans-serif;overflow:auto}
+.provider-connect-screen>header{width:640px;margin:66px auto 0;text-align:center}.provider-connect-screen h1{font:400 28px/35px 'Go Sans',sans-serif;margin:0 0 8px}.provider-connect-screen header p{font:400 18px/27px 'Go Sans',sans-serif;margin:0;color:#73716d}.provider-connect-card{box-sizing:border-box;width:571px;margin:66px auto 0;padding:32px 32px 21px;border-radius:20px;background:white;box-shadow:0 1px 2px #1414130f;display:flex;flex-direction:column}.provider-connect-row{display:flex;align-items:center;gap:16px;height:50px;flex:none}.provider-connect-row>span{width:40px;height:40px;display:grid;place-items:center;border-radius:10px;background:#f8f7fa;flex:none}.provider-connect-row h2,.provider-connect-row p{font:400 18px/27px 'Go Sans',sans-serif;margin:0;white-space:nowrap}.provider-connect-row p{color:#73716d}.provider-connect-divider{display:block;max-width:none;margin:31px 0 32px}.provider-connect-actions{display:flex;flex-direction:column;gap:8px;margin-top:28px}.provider-connect-actions>button{height:40px;min-height:40px;width:100%;border-radius:12px;font-size:16px}
+
+.provider-connect-preview{position:absolute;right:24px;top:16px;display:flex;align-items:center;gap:8px;font:12px/18px 'Go Sans',sans-serif;color:#73716d}
+.provider-connect-preview select{font:inherit;color:#73716d;background:#fcfaf8;border:1px solid #dedbd5;border-radius:6px;padding:4px 8px}
+
+.provider-connect-card{flex:none;margin-bottom:32px}
+.screen .provider-connect-screen>.figma-action-footer{position:sticky;bottom:0;margin-top:auto;flex:none}
+.provider-connect-row img{width:24px;height:24px}

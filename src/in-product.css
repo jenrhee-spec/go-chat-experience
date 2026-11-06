@@ -1,0 +1,409 @@
+/* Go workspace: Origin controls, quiet surfaces, and one shared spacing rhythm. */
+.post-agents {
+  background:var(--origin-color-background-base-subdued);
+  color:var(--origin-color-text-base-default);
+  font-weight:var(--origin-font-weight-regular);
+}
+.post-agents .pa-sidebar {
+  width:240px;
+  background:var(--origin-neutral-5);
+  border-color:var(--origin-color-border-base-subdued);
+}
+.post-agents .pa-sidebar>header {
+  height:64px;
+  padding:var(--origin-space-4);
+}
+.post-agents .pa-sidebar>header>span {font-weight:var(--origin-font-weight-medium);margin-right:0}
+.post-agents .pa-compose {
+  margin-left:auto;
+  width:32px;
+  height:32px;
+  padding:var(--origin-space-1);
+  border:0;
+  border-radius:var(--origin-radius-2);
+  background:transparent;
+}
+.post-agents .pa-sidebar nav {padding:var(--origin-space-2) var(--origin-space-3)}
+.post-agents .pa-sidebar nav h2 {
+  color:var(--origin-color-text-base-subdued);
+  padding:var(--origin-space-2);
+  font-weight:var(--origin-font-weight-regular);
+}
+.post-agents .pa-sidebar nav .origin-button {
+  justify-content:flex-start;
+  gap:var(--origin-space-2);
+  min-height:36px;
+  padding:var(--origin-space-2);
+  border-radius:var(--origin-radius-2);
+  font-size:14px;
+  line-height:var(--origin-line-height-text-small);
+  color:var(--origin-color-text-base-default);
+}
+.post-agents .pa-sidebar nav .origin-button:hover {background:var(--origin-neutral-10)}
+.post-agents .pa-sidebar nav .pa-current {background:var(--origin-neutral-10)}
+.post-agents .pa-sidebar nav .pa-see-more,
+.post-agents .pa-sidebar nav .pa-muted {color:var(--origin-color-text-base-subdued)}
+.post-agents .pa-sidebar nav .pa-see-more {font-size:12px;margin-bottom:var(--origin-space-5)}
+.post-agents .pa-sidebar nav .pa-connectors {margin-top:var(--origin-space-5)}
+.post-agents .pa-sidebar footer {padding:var(--origin-space-4);border-color:var(--origin-color-border-base-subdued)}
+.post-agents .pa-main>header {
+  height:64px;
+  padding:0 var(--origin-space-5);
+  border-bottom:1px solid var(--origin-color-border-base-subdued);
+  font-weight:var(--origin-font-weight-medium);
+}
+.post-agents .pa-main>header .origin-button {
+  width:32px;
+  height:32px;
+  padding:var(--origin-space-1);
+  border-radius:var(--origin-radius-2);
+  background:transparent;
+}
+.post-agents .pa-main>header .origin-button:hover {background:var(--origin-neutral-10)}
+.post-agents .pa-conversation {
+  width:720px;
+  max-width:100%;
+  padding:var(--origin-space-8) var(--origin-space-6) var(--origin-space-6);
+  scrollbar-width:none;
+  scrollbar-color:var(--origin-neutral-20) transparent;
+}
+.post-agents .pa-home-guide {font:400 14px/var(--origin-line-height-text-small) 'Go Sans',sans-serif}
+.post-agents .pa-home-guide .pa-home-greeting {
+  font:500 20px/var(--origin-line-height-heading-medium) 'Go Sans',sans-serif;
+  margin-bottom:var(--origin-space-3);
+}
+.post-agents .pa-home-guide .pa-go-app-intro {margin-bottom:var(--origin-space-5)}
+.post-agents .pa-home-guide .pa-go-surfaces-intro {margin-bottom:var(--origin-space-3)}
+.post-agents .pa-go-surfaces {width:100%;margin-bottom:28px;align-items:flex-start}
+.post-agents .pa-go-surface {flex:1;min-width:0}
+.post-agents .pa-go-surface h3 {margin:12px 0 4px;font:500 14px/22px 'Go Sans',sans-serif}
+.post-agents .pa-go-surface>p {margin:12px 0 0;font:400 14px/22px 'Go Sans',sans-serif;color:var(--origin-color-text-base-default)}
+.post-agents .pa-surface-preview {height:156px;position:relative;overflow:hidden;border:1px solid var(--origin-color-border-base-subdued);border-radius:12px;background:#f4f2f0;color:#514d49}
+.post-agents .pa-surface-preview svg {flex:none;width:16px;height:16px}
+.post-agents .pa-image-lines {position:absolute;inset:22px 18px;display:flex;flex-direction:column;gap:13px}
+.post-agents .pa-image-lines i {display:block;height:4px;border-radius:2px;background:#d9d6d2}
+.post-agents .pa-image-lines i:nth-child(2) {width:85%}
+.post-agents .pa-image-lines i:nth-child(4) {width:65%}
+.post-agents .pa-image-selection {position:absolute;left:16px;right:36px;top:35px;height:12px;background:#d8b8bf80}
+.post-agents .pa-inline-cue {position:absolute;left:64px;top:47px;width:26px;height:26px;display:grid;place-items:center;background:transparent;border:0;border-radius:7px;box-shadow:none}
+.post-agents .pa-image-menu {position:absolute;left:55px;top:76px;width:116px;padding:9px 12px;background:white;border:1px solid #e5e1dd;border-radius:10px;box-shadow:0 4px 12px #3420220d;font:400 12px/18px 'Go Sans',sans-serif}
+.post-agents .pa-image-menu>span {display:block;margin-bottom:8px;color:#73716d}
+.post-agents .pa-image-menu>div {display:flex;align-items:center;gap:10px;margin-top:8px}
+.post-agents .pa-image-menu i {height:4px;width:47px;background:#d9d6d2;border-radius:2px}
+.post-agents .pa-image-panel .pa-image-lines {right:88px;opacity:.7}
+.post-agents .pa-image-sidepanel {position:absolute;top:10px;right:10px;bottom:0;width:132px;border:1px solid #e5e1dd;border-bottom:0;border-radius:9px 9px 0 0;background:#fff;box-shadow:-3px 0 10px #34202208}
+.post-agents .pa-image-sidepanel header {display:flex;align-items:center;gap:5px;padding:10px;font:500 12px/18px 'Go Sans',sans-serif}
+.post-agents .pa-image-sidepanel header>svg:last-child {margin-left:auto;width:12px;height:12px;color:#8b8580}
+.post-agents .pa-image-panel-content {display:flex;flex-direction:column;gap:10px;padding:17px 14px}
+.post-agents .pa-image-panel-content i {height:4px;background:#e4dfdb;border-radius:2px;width:90%}
+.post-agents .pa-image-panel-content i:nth-child(2) {width:65%}
+.post-agents .pa-image-composer {position:absolute;bottom:10px;left:8px;right:8px;display:flex;align-items:center;justify-content:space-between;border:1px solid #e5e1dd;border-radius:10px;padding:8px;color:#8b8580;font:400 11px/16px 'Go Sans',sans-serif}
+.post-agents .pa-image-composer svg {background:#e7def4;color:#714cb6;border-radius:50%;padding:2px}
+.post-agents .pa-image-underline {position:absolute;left:55px;top:55px;width:90px;height:11px;background:#ffdbdf;border-bottom:2px solid #e95a6a}
+.post-agents .pa-image-popover {position:absolute;left:12px;right:12px;top:71px;padding:10px 12px;background:white;border:1px solid #e5e1dd;border-radius:12px;box-shadow:0 4px 12px #3420220d}
+.post-agents .pa-image-popover header {display:flex;justify-content:space-between;align-items:center;font:400 12px/18px 'Go Sans',sans-serif;color:#73716d}
+.post-agents .pa-image-popover header svg {color:#714cb6}
+.post-agents .pa-image-correction {display:flex;gap:6px;margin:12px 0}
+.post-agents .pa-image-correction i {width:48px;height:5px;border-radius:2px;background:#f3b5bd}
+.post-agents .pa-image-correction i:last-child {width:65px;background:#cbb9ef}
+.post-agents .pa-image-popover footer {display:flex;gap:5px;align-items:center;font:400 10px/14px 'Go Sans',sans-serif;color:#73716d}
+@keyframes pa-intro-enter {from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.post-agents .pa-go-intro>.pa-home-greeting {animation:pa-intro-enter 500ms cubic-bezier(.22,1,.36,1) both}
+.post-agents .pa-go-intro>.pa-go-app-intro {animation:pa-intro-enter 500ms cubic-bezier(.22,1,.36,1) 260ms both}
+.post-agents .pa-go-intro>.pa-go-surfaces-intro {animation:pa-intro-enter 450ms cubic-bezier(.22,1,.36,1) 650ms both}
+.post-agents .pa-go-surface {animation:pa-intro-enter 500ms cubic-bezier(.22,1,.36,1) 0ms both}
+.post-agents .pa-go-surface:nth-child(2) {animation-delay:80ms}
+.post-agents .pa-go-surface:nth-child(3) {animation-delay:160ms}
+@media(prefers-reduced-motion:reduce){
+ .post-agents .pa-go-intro>.pa-home-greeting,.post-agents .pa-go-intro>.pa-go-app-intro,.post-agents .pa-go-intro>.pa-go-surfaces-intro,.post-agents .pa-go-surface {animation:none}
+}
+.post-agents .pa-email-assistant-icon svg {width:28px;height:28px}
+.post-agents .pa-home-guide .pa-setup-response {
+  font:400 14px/var(--origin-line-height-text-small) 'Go Sans',sans-serif;
+  margin-bottom:var(--origin-space-4)!important;
+}
+.post-agents .pa-email-assistant-setup,
+.post-agents .pa-next-agent-card,
+.post-agents .pa-email-artifact,
+.post-agents .pa-extension-artifact {
+  width:520px;
+  max-width:100%;
+  padding:var(--origin-space-4);
+  background:var(--origin-color-background-base-default);
+  color:var(--origin-color-text-base-default);
+  border:1px solid var(--origin-color-border-base-subdued);
+  border-radius:var(--origin-radius-4);
+  box-shadow:none;
+}
+.post-agents .pa-email-assistant-setup {width:460px}
+.post-agents .pa-email-assistant-setup>header {margin-bottom:var(--origin-space-3)}
+.post-agents .pa-email-assistant-setup h2 {font:500 14px/var(--origin-line-height-text-small) 'Go Sans',sans-serif}
+.post-agents .pa-email-assistant-icon,
+.post-agents .pa-next-agent-icon {
+  width:28px;
+  height:28px;
+  flex:none;
+  display:grid;
+  place-items:center;
+  border-radius:var(--origin-radius-2-and-half);
+  background:var(--origin-color-background-brand-subdued);
+  color:var(--origin-color-background-brand-default);
+}
+.post-agents .pa-email-assistant-icon {background:transparent}
+.post-agents .pa-email-assistant-icon img {width:28px;height:28px}
+.post-agents .pa-email-assistant-options {padding-bottom:var(--origin-space-3)}
+.post-agents .pa-email-assistant-options p {margin:0}
+.post-agents .pa-email-assistant-options .origin-input-label {font-weight:400}
+.post-agents .pa-email-assistant-setup>footer {
+  border-top:1px solid var(--origin-color-border-base-subdued);
+  padding-top:var(--origin-space-3);
+}
+.post-agents .pa-email-assistant-status {
+  margin-left:auto;
+  padding:var(--origin-space-1) var(--origin-space-2);
+  border-radius:var(--origin-radius-2);
+  background:var(--origin-neutral-10);
+  color:var(--origin-color-text-base-subdued);
+  font:400 12px/var(--origin-line-height-text-xsmall) 'Go Sans',sans-serif;
+}
+.post-agents .pa-email-assistant-status.is-on {background:var(--origin-color-background-brand-subdued);color:var(--origin-purple-60)}
+.post-agents .pa-next-agent-card>header {display:flex;align-items:center;gap:var(--origin-space-3)}
+.post-agents .pa-next-agent-icon img {width:24px;height:24px}
+.post-agents .pa-next-agent-card>header strong,
+.post-agents .pa-next-agent-card>header small {display:block}
+.post-agents .pa-next-agent-card>header strong {font-weight:var(--origin-font-weight-medium)}
+.post-agents .pa-next-agent-card>p {margin:var(--origin-space-4) 0}
+.post-agents .pa-next-agent-preview {width:520px;max-width:100%}
+.post-agents .pa-next-agent-preview .writing-agent-preview {margin:0 0 var(--origin-space-4)}
+.post-agents .pa-home-agent>.pa-email-assistant-setup {margin-bottom:var(--origin-space-4)}
+.post-agents .pa-home-agent>.writing-agent-preview {width:520px;max-width:100%}
+.post-agents .pa-email-artifact {gap:0}
+.post-agents .pa-email-header,
+.post-agents .pa-email-subject {min-height:36px;gap:var(--origin-space-3)}
+.post-agents .pa-email-field-label {width:56px;font-size:12px}
+.post-agents .pa-email-recipient {gap:var(--origin-space-2)}
+.post-agents .pa-email-body {
+  padding:var(--origin-space-4) 0;
+  margin-top:var(--origin-space-3);
+  border-top:1px solid var(--origin-color-border-base-subdued);
+  gap:var(--origin-space-3);
+  line-height:var(--origin-line-height-text-medium);
+}
+.post-agents .pa-email-body p {margin:0}
+.post-agents .pa-email-footer {padding-top:var(--origin-space-4);border-top:1px solid var(--origin-color-border-base-subdued)}
+.post-agents .pa-extension-artifact {gap:var(--origin-space-3)}
+.post-agents .pa-extension-icon {border:0;background:var(--origin-neutral-5);border-radius:var(--origin-radius-2-and-half)}
+.post-agents .pa-extension-copy strong {font-weight:var(--origin-font-weight-medium)}
+.post-agents .pa-extension-copy>span {white-space:normal}
+.post-agents .pa-composer {
+  width:672px;
+  max-width:calc(100% - 48px);
+  height:56px;
+  margin:var(--origin-space-2) var(--origin-space-6) var(--origin-space-6);
+  padding:0 var(--origin-space-3);
+  border-color:var(--origin-color-border-base-subdued);
+  border-radius:var(--origin-radius-8);
+  background:var(--origin-color-background-base-default);
+  box-shadow:var(--origin-elevation-base-low);
+}
+.post-agents .pa-composer:focus-within {border-color:var(--origin-color-border-brand-default)}
+.post-agents .pa-composer>.origin-text-field {flex:1;min-width:0}
+.post-agents .pa-composer .origin-text-field-input {
+  width:100%;
+  height:40px;
+  min-height:0;
+  padding:var(--origin-space-2) 0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+.post-agents .pa-composer .origin-text-field-input:focus-visible {outline:none}
+.post-agents .pa-composer>.origin-button:last-child {border-radius:var(--origin-radius-25)}
+.post-agents .pa-notice {
+  z-index:2;
+  max-width:640px;
+  bottom:96px;
+  padding:var(--origin-space-3) var(--origin-space-4);
+  border-color:var(--origin-color-border-base-subdued);
+  color:var(--origin-color-text-base-default);
+  box-shadow:var(--origin-elevation-base-low);
+}
+/* Keep working examples inside the conversation, at the same width as artifacts. */
+.post-agents .writing-agent-preview {
+  position:relative;
+  inset:auto;
+  width:520px;
+  max-width:100%;
+  color:var(--origin-color-text-base-default);
+}
+.post-agents .writing-preview-doc,
+.post-agents .writing-preview-suggestion {
+  position:relative;
+  inset:auto;
+  min-height:0;
+  margin:0;
+  padding:var(--origin-space-4);
+  background:var(--origin-color-background-base-default);
+  border-color:var(--origin-color-border-base-subdued);
+  border-radius:var(--origin-radius-3);
+  box-shadow:none;
+  backdrop-filter:none;
+}
+.post-agents .writing-preview-suggestion {margin-top:var(--origin-space-3)}
+.post-agents .writing-preview-doc header {font:400 14px/var(--origin-line-height-text-small) 'Go Sans',sans-serif}
+.post-agents .writing-preview-doc header img {width:20px;height:20px}
+.post-agents .writing-preview-doc h3,
+.post-agents .writing-preview-suggestion h3 {font:500 14px/var(--origin-line-height-text-small) 'Go Sans',sans-serif;color:var(--origin-color-text-base-default)}
+.post-agents .writing-preview-doc p,
+.post-agents .writing-preview-replacement {font:400 14px/var(--origin-line-height-text-small) 'Go Sans',sans-serif}
+.post-agents .writing-preview-doc h4 {font:500 12px/var(--origin-line-height-text-xsmall) 'Go Sans',sans-serif}
+.post-agents .writing-preview-suggestion header,
+.post-agents .writing-preview-note {color:var(--origin-color-text-base-subdued)}
+.post-agents .writing-preview-replacement strong {color:var(--origin-purple-60)}
+.post-agents .writing-preview-underline:focus-visible {outline-color:var(--origin-purple-60)}
+
+.post-agents .pa-sidebar [data-agent-target]>img,.post-agents .pa-sidebar [data-agent-target]>svg {width:20px;height:20px;flex:none;object-fit:contain}
+
+.post-agents .pa-conversation::-webkit-scrollbar {display:none}
+
+.post-agents .pa-inline-cue .hero-tile{width:20px;height:20px}.post-agents .pa-preview-hero{display:block;width:20px;height:20px;flex:none}
+/* Keep the Hero mark centered within its texture tile despite generic preview SVG sizing. */
+.post-agents .hero-tile{display:grid;place-items:center;box-shadow:inset 0.5px 0.5px 1px #ffffff40,inset -0.5px -0.5px 1px #3b225a18,0 0.5px 1px #34213b0a}
+.post-agents .hero-tile>svg{display:block;width:100%;height:100%;margin:0;filter:drop-shadow(0 1px 1px #2110253d)}
+
+.post-agents .pa-image-popover .pa-suggestion-actions{display:flex;align-items:center;gap:8px}.post-agents .pa-image-popover .pa-suggestion-actions svg{width:14px;height:14px;color:var(--origin-color-text-base-default,#141413)}.post-agents .pa-suggestion-dismiss{transform:rotate(45deg)}.post-agents .pa-image-popover footer{margin-top:14px}
+
+.post-agents .pa-sidebar nav .pa-hero-nav{min-height:44px;margin-bottom:24px;border-radius:12px;gap:12px}.post-agents .pa-nav-hero-icon{display:block;width:24px;height:24px;flex:none}.post-agents .pa-sidebar>header>span{font-size:20px;font-weight:600}
+
+.post-agents .pa-home-guide.pa-chat-customize .pa-home-greeting{font-size:14px;line-height:22px}
+
+.post-agents .pa-chat-customize .pa-setup-chat-turn{margin:0}
+.post-agents .pa-chat-customize .pa-home-greeting,
+.post-agents .pa-chat-customize .pa-setup-response,
+.post-agents .pa-chat-customize .pa-hero-intro-list{
+  box-sizing:border-box;
+  width:fit-content;
+  max-width:560px;
+  padding:10px 16px;
+  margin:0 0 12px!important;
+  border-radius:20px;
+  background:var(--origin-neutral-10,#f1f0ee);
+  color:var(--origin-color-text-base-default);
+  font:400 14px/22px 'Go Sans',sans-serif;
+}
+.post-agents .pa-chat-customize .pa-hero-intro-list{list-style:none}
+.post-agents .pa-chat-customize .pa-hero-intro-list li+li{margin-top:10px}
+.post-agents .pa-chat-customize .pa-hero-intro-list strong{font-weight:400}
+.post-agents .pa-chat-customize .pa-personalize-hero>img{width:20px;height:20px;flex:none}
+.post-agents .pa-chat-customize .pa-personalize-hero>svg{width:16px;height:16px;flex:none}
+
+.post-agents .pa-next-steps{margin-top:12px}
+.post-agents .pa-next-steps .pa-go-surfaces{margin-top:16px}
+.post-agents .pa-next-steps .writing-agent-preview{margin-top:16px}
+
+.post-agents .pa-personalize-actions{display:flex;align-items:center;gap:8px;margin-top:0}
+
+.post-agents .pa-confirmed-hero{display:block;flex:none;width:20px;height:20px}
+.post-agents .pa-confirmed-hero .hero-tile{width:20px;height:20px}
+
+.post-agents .pa-chat-customize .pa-setup-response:has(>.pa-confirmed-hero){display:flex;align-items:center;gap:10px}
+.post-agents .pa-next-steps .pa-email-assistant-setup,.post-agents .pa-next-steps .pa-email-artifact{margin-bottom:12px}
+
+.post-agents .pa-compact-surfaces{width:520px;max-width:100%;margin:12px 0}
+.post-agents .pa-compact-surfaces .pa-go-surfaces{margin:0;gap:12px}
+.post-agents .pa-compact-surfaces .pa-surface-preview{height:104px}
+.post-agents .pa-compact-surfaces .pa-go-surface>p{font-size:12px;line-height:18px;margin-top:8px}
+.post-agents .pa-compact-surfaces .pa-image-menu{top:54px;left:28px;transform:scale(.75);transform-origin:top left}
+.post-agents .pa-compact-surfaces .pa-image-popover{transform:scale(.7);transform-origin:top left;width:185px;left:8px;top:27px}
+.post-agents .pa-extension-disclosure{width:560px;max-width:100%;overflow:hidden;border:1px solid #e5e1dd;border-radius:16px;background:#fff;margin-bottom:12px}
+.post-agents .pa-extension-install-row{display:flex;align-items:center;gap:10px;padding:16px}
+.post-agents .pa-chrome-logo{flex:none}
+.post-agents .pa-extension-install-row .pa-extension-copy strong{font-size:13px}
+.post-agents .pa-extension-install-row .pa-extension-copy>span{font-size:11px;white-space:normal}
+.post-agents .pa-extension-install-row>.origin-button{flex:none}
+.post-agents .pa-extension-demo{padding:20px;background:#eeE9f7;border-bottom:1px solid #e5e1dd}
+.post-agents .pa-extension-demo .writing-agent-preview{width:100%;margin:0}
+
+/* Launch treatment: Go speaks in plain text, while interactive cards retain their containers. */
+.post-agents .pa-chat-customize .pa-home-greeting,
+.post-agents .pa-chat-customize .pa-setup-response,
+.post-agents .pa-chat-customize .pa-hero-intro-list{background:none;border-radius:0;padding:0;margin:0 0 16px!important}
+.post-agents .pa-next-steps{margin-top:16px}
+.post-agents .pa-extension-disclosure{border-radius:12px;box-shadow:0 1px 3px #28221b08}
+.post-agents .pa-extension-install-row{padding:16px;gap:12px;min-height:76px;box-sizing:border-box}
+.post-agents .pa-extension-install-row .pa-extension-copy strong{font-size:14px;line-height:20px}
+.post-agents .pa-extension-install-row .pa-extension-copy>span{font-size:12px;line-height:18px}
+.post-agents .pa-extension-demo{padding:0;background:#151515;border-bottom:1px solid #e5e1dd}
+.post-agents .pa-extension-demo video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}
+
+.post-agents .pa-email-assistant-options .origin-input-label,
+.post-agents .pa-email-assistant-options .origin-input-label-helper p{font:400 14px/22px 'Go Sans',sans-serif!important;letter-spacing:normal}
+.post-agents .pa-email-assistant-options .origin-checkbox>label{gap:2px!important}
+
+/* Compact illustrations keep every cue in its own visible area. */
+.post-agents .pa-compact-surfaces .pa-image-lines{inset:16px 14px;gap:12px}
+.post-agents .pa-compact-surfaces .pa-image-selection{top:28px;left:14px;right:42px;height:10px}
+.post-agents .pa-compact-surfaces .pa-inline-cue{left:20px;top:44px;width:22px;height:22px;z-index:2}
+.post-agents .pa-compact-surfaces .pa-image-menu{left:50px;top:43px;width:94px;padding:6px 8px;transform:none;border-radius:8px;font-size:10px;line-height:14px}
+.post-agents .pa-compact-surfaces .pa-image-menu>span{margin-bottom:4px}
+.post-agents .pa-compact-surfaces .pa-image-menu>div{margin-top:4px;gap:6px}
+.post-agents .pa-compact-surfaces .pa-image-menu>div:last-child{display:none}
+.post-agents .pa-compact-surfaces .pa-image-menu svg{width:12px;height:12px}
+.post-agents .pa-compact-surfaces .pa-image-panel-content{padding:0 12px;gap:5px}
+.post-agents .pa-compact-surfaces .pa-image-panel-content i{height:3px}
+.post-agents .pa-compact-surfaces .pa-image-panel-content i:last-child{display:none}
+.post-agents .pa-compact-surfaces .pa-image-composer{bottom:8px;padding:4px 6px;background:#fff}
+.post-agents .pa-compact-surfaces .pa-image-underline{top:26px;left:20px;width:94px;height:10px}
+.post-agents .pa-compact-surfaces .pa-image-popover{transform:none;left:10px;right:10px;top:46px;width:auto;padding:6px 8px;border-radius:8px}
+.post-agents .pa-compact-surfaces .pa-image-popover header{font-size:10px;line-height:14px}
+.post-agents .pa-compact-surfaces .pa-image-popover footer{margin-top:4px;font-size:9px;line-height:12px}
+.post-agents .pa-compact-surfaces .pa-suggestion-actions{gap:4px}
+.post-agents .pa-compact-surfaces .pa-suggestion-actions svg{width:10px;height:10px}
+.post-agents .pa-nav-hero-updated{animation:pa-hero-replace 750ms cubic-bezier(.22,1,.36,1)}
+@keyframes pa-hero-replace{0%{opacity:0;transform:scale(.65)}55%{opacity:1;transform:scale(1.22);box-shadow:0 0 0 7px #d4c7ff55}100%{opacity:1;transform:scale(1);box-shadow:0 0 0 0 #d4c7ff00}}
+@media(prefers-reduced-motion:reduce){.post-agents .pa-nav-hero-updated{animation:none}}
+
+.post-agents .pa-chat-customize .pa-personalize-hero>.pa-personalize-smiley{width:20px;height:20px;flex:none}
+
+.post-agents .pa-chat-customize .pa-personalize-hero{gap:4px}
+
+.post-agents .pa-email-step{margin-left:auto;font:400 12px/18px 'Go Sans',sans-serif;color:var(--origin-color-text-base-subdued)}
+.post-agents .pa-email-step-title{font:500 14px/22px 'Go Sans',sans-serif;margin:0 0 4px}
+.post-agents .pa-email-step-description{font:400 14px/22px 'Go Sans',sans-serif;color:var(--origin-color-text-base-subdued);margin:0 0 16px}
+
+.post-agents .pa-slack-connect{display:flex;align-items:center;gap:12px;width:560px;max-width:100%;box-sizing:border-box;padding:16px;border:1px solid #e5e1dd;border-radius:12px;background:#fff;margin-bottom:12px}
+.post-agents .pa-slack-connect>svg{flex:none}
+.post-agents .pa-slack-connect>div{flex:1}
+.post-agents .pa-slack-connect strong{font:500 14px/22px 'Go Sans',sans-serif}
+.post-agents .pa-slack-connect p,.post-agents .pa-slack-connect>span{margin:0;font:400 14px/22px 'Go Sans',sans-serif;color:var(--origin-color-text-base-subdued)}
+.pa-slack-dialog{width:380px;max-width:90vw;padding:24px;border:1px solid #e5e1dd;border-radius:16px;background:#fff;color:#141413;font:400 14px/22px 'Go Sans',sans-serif}
+.pa-slack-dialog::backdrop{background:#14141355}
+.pa-slack-dialog h2{font:500 18px/26px 'Go Sans',sans-serif;margin:12px 0}
+.pa-slack-dialog p{margin:0 0 16px}
+.pa-slack-preview-note{color:#73716d;font-size:12px}
+
+.post-agents .pa-slack-connected{display:flex;align-items:center;gap:4px}
+.post-agents .pa-writing-style-list{max-width:540px;padding-left:20px;margin:0 0 16px;font:400 14px/22px 'Go Sans',sans-serif}
+.post-agents .pa-writing-style-list li{padding-left:2px;margin-bottom:8px}
+.post-agents .pa-writing-style-edit{display:flex;flex-direction:column;gap:12px;width:560px;max-width:100%;margin-bottom:16px}
+
+/* Email artifacts and paged questions follow the compact chat-card reference. */
+.post-agents .pa-email-artifact,
+.post-agents .pa-email-question-card{width:600px;max-width:100%;padding:16px;border-radius:16px;border:1px solid #e8e5df;box-shadow:0 1px 3px #1414130a}
+.post-agents .pa-email-header,.post-agents .pa-email-subject{min-height:32px;gap:12px}
+.post-agents .pa-email-field-label{width:auto;font-size:14px}
+.post-agents .pa-email-body{border:0;margin:0;padding:8px 0 12px;gap:12px;line-height:23px}
+.post-agents .pa-email-footer{border:0;padding:0;justify-content:space-between}
+.post-agents .pa-email-brand{width:22px;height:22px;flex:none}
+.post-agents .pa-email-question-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:8px}
+.post-agents .pa-email-question-header h2{margin:0;font:500 14px/22px 'Go Sans',sans-serif}
+.post-agents .pa-email-pagination{display:flex;align-items:center;gap:6px;flex:none;color:#73716d;font:400 13px/22px 'Go Sans',sans-serif;white-space:nowrap}
+.post-agents .pa-email-pagination button{display:grid;place-items:center;width:22px;height:24px;border:0;border-radius:4px;background:transparent;color:inherit;font:400 22px/1 sans-serif;cursor:pointer}
+.post-agents .pa-email-pagination button:disabled{opacity:.35;cursor:default}
+.post-agents .pa-email-pagination button:hover:enabled{background:#f1eee8}
+.post-agents .pa-email-pagination button:focus-visible{outline:2px solid #714cb6;outline-offset:2px}
+.post-agents .pa-email-question-card .pa-email-step-description{font-size:13px;margin:0 0 16px}
+.post-agents .pa-email-question-card .pa-email-assistant-options{padding-bottom:12px}
+.post-agents .pa-email-question-card>.pa-email-question-footer{display:flex;justify-content:flex-end;align-items:center;gap:8px;border:0;padding-top:4px}
+.post-agents .pa-email-question-footer [role=status]{font:400 14px/22px 'Go Sans',sans-serif;color:#73716d}

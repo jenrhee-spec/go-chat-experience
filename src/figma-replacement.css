@@ -1,0 +1,54 @@
+.figma-browser-stage{position:relative;width:1280px;height:832px;background:#fcfaf8;color:#141413;overflow:hidden;font-family:'Go Sans',sans-serif}
+.figma-browser-stage>.chrome{position:absolute;inset:0 0 auto;height:78px;z-index:3}
+.figma-meet-go{position:relative;width:1280px;height:832px;background:#fcfaf8;color:#141413}
+.figma-meet-go-copy{position:absolute;left:50%;top:241px;transform:translateX(-50%);width:491px;display:flex;flex-direction:column;align-items:center;gap:50px;text-align:center}
+.figma-meet-go-logo{position:relative;width:69px;height:69px;display:grid;place-items:center}
+.figma-meet-go-logo .headline-go-tile{position:absolute;inset:0;border-radius:22px;background:#472028}
+.figma-meet-go-logo img{position:relative;width:54px;height:54px}
+.figma-meet-go-copy h1{font:600 24px/30px 'Go Sans',sans-serif;letter-spacing:0;margin:0}
+.figma-meet-go-copy p{max-width:491px;font:600 24px/30px 'Go Sans',sans-serif;margin:0}
+.figma-meet-go .figma-action-footer{height:97px}
+.figma-memory-onboarding{position:relative;display:block;width:1280px;height:832px;background:#fcfaf8;color:#141413}
+.figma-memory-onboarding>.chrome{position:absolute;inset:0 0 auto;height:78px;z-index:3}
+.figma-memory-onboarding>.copy{position:absolute;top:128px;left:50%;transform:translateX(-50%);width:467px;text-align:center}
+.figma-memory-onboarding>.copy h1{font:600 24px/30px 'Go Sans',sans-serif;letter-spacing:0;margin:0}
+.figma-memory-onboarding>.copy h1 span{display:block;margin-top:8px;color:#73716d;font:400 18px/27px 'Go Sans',sans-serif}
+.figma-memory-onboarding .memory-frame{left:calc(50% - 394px);top:244px;width:789px;height:454px;max-height:none;border-radius:20px;z-index:1}
+.figma-memory-onboarding .memory-scroll{height:454px;max-height:none;display:grid;grid-template-columns:139px minmax(0,1fr);grid-template-rows:auto auto auto;column-gap:56px;align-content:start;padding:32px 48px;overflow:auto}
+.figma-memory-onboarding .memory-identity{grid-column:1;grid-row:1 / span 3;align-items:flex-start;flex-direction:column;gap:14px}
+.figma-memory-onboarding .memory-identity img{width:100px;height:100px;border-radius:50%}
+.figma-memory-onboarding .memory-identity-role{width:100%}
+.figma-memory-onboarding .memory-overview-section{grid-column:2;grid-row:1;margin-top:0}
+.figma-memory-onboarding .memory-section:not(.memory-overview-section){grid-column:2;margin-top:14px;padding-top:14px}
+.figma-memory-onboarding .memory-section header{margin-bottom:8px}
+.figma-memory-onboarding .memory-overview{margin-top:0}
+.figma-memory-onboarding .figma-action-footer{height:97px}
+.figma-agent-content{position:absolute;inset:78px 0 97px;display:flex;flex-direction:column;align-items:center;padding-top:50px}
+.figma-agent-content>header{text-align:center;width:620px}
+.figma-agent-content h1{font:600 24px/30px 'Go Sans',sans-serif;letter-spacing:0;margin:0}
+.figma-agent-content header p{margin:8px 0 0;color:#73716d;font:400 18px/27px 'Go Sans',sans-serif}
+.figma-agent-card{width:576px;height:473px;margin-top:50px;border-radius:20px;box-shadow:0 1px 3px rgba(20,20,19,.08);background:linear-gradient(153deg,#f7cabc 0%,#eed1d9 54%,#f3efff 100%);display:flex;flex-direction:column;align-items:center;position:relative;padding-top:34px;overflow:hidden}
+.figma-agent-card:before,.figma-agent-card:after{content:'';position:absolute;top:44px;width:122px;height:205px;border-radius:100px;background:rgba(255,255,255,.18);filter:blur(1px)}
+.figma-agent-card:before{left:-77px}.figma-agent-card:after{right:-77px}
+.figma-agent-selector{display:flex;align-items:center;justify-content:center;gap:46px;position:relative;z-index:1}
+.figma-agent-selector>button:not(.figma-agent-tile){border:0;background:transparent;color:#141413;width:24px;height:44px;display:grid;place-items:center;padding:0}
+.figma-agent-selector>button:not(.figma-agent-tile) svg{width:20px;height:20px}
+.figma-agent-tile{width:220px;height:210px;border-radius:64px;border:8px solid rgba(0,0,0,.08);padding:14px;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;color:#141413;font:600 18px/24px 'Go Sans',sans-serif}
+.figma-agent-tile img{width:64px;height:64px}
+.figma-agent-description{width:460px;min-height:54px;text-align:center;margin:33px 0 16px;font:400 16px/27px 'Go Sans',sans-serif;color:#141413}
+.figma-agent-card>.origin-button{z-index:1}
+.figma-agent-dots{position:absolute;bottom:24px;left:0;right:0;display:flex;justify-content:center;gap:10px}
+.figma-agent-dots button{width:12px;height:12px;border:0;border-radius:50%;padding:0;background:#ddd9d3;cursor:pointer}
+.figma-agent-dots button[aria-selected=true]{background:#89857f}
+.figma-agent-dots button:focus-visible,.figma-agent-selector button:focus-visible{outline:2px solid #7650bd;outline-offset:4px}
+.figma-action-footer{position:absolute;bottom:0;left:2px;width:1278px;height:97px;background:#fcfaf7;box-shadow:0 -2px 14px rgba(20,20,19,.03);display:flex;align-items:center;justify-content:center;gap:16px;z-index:2}
+.figma-preview-surface{position:absolute;inset:78px 2px 97px;background:linear-gradient(153deg,#f9d0bd 0%,#f0dbe1 45%,#f3effc 100%)}
+.figma-close-preview{position:absolute;right:40px;top:40px}
+.figma-chat-preview{position:absolute;left:50%;top:50%;width:620px;transform:translate(-50%,-50%);display:flex;align-items:flex-start;gap:24px}
+.figma-preview-avatar{width:80px;height:80px;flex:none;border:3px solid rgba(125,82,67,.16);border-radius:24px;background:#fff;display:grid;place-items:center}
+.figma-preview-avatar img{width:38px;height:38px}
+.figma-preview-messages{display:flex;flex-direction:column;align-items:flex-start;gap:15px}
+.figma-preview-messages p{border-radius:17px;background:rgba(255,255,255,.96);padding:14px 17px;margin:0;font:400 22px/30px 'Go Sans',sans-serif;white-space:nowrap}
+.figma-preview-messages .figma-preview-result{margin-left:0;display:flex;align-items:center;gap:12px;padding:12px 17px}
+.figma-preview-result span{width:22px;height:22px;border-radius:6px;background:#f1e9e4;color:#6f2c3d;font-size:14px;display:grid;place-items:center}
+@media(prefers-reduced-motion:reduce){.figma-agent-card *{scroll-behavior:auto!important}}

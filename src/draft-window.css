@@ -1,0 +1,13 @@
+html:has(.pa-draft-window),body:has(.pa-draft-window),#root:has(.pa-draft-window){min-height:100%;margin:0;background:#f7f6f3}
+.pa-draft-window{box-sizing:border-box;width:min(680px,calc(100% - 32px));margin:42px auto;background:#fff;border:1px solid #e8e6e1;border-radius:16px;box-shadow:0 8px 32px #14141312;overflow:hidden;color:#141413;font:400 14px/21px 'Go Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.pa-draft-window-header{height:52px;padding:0 20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #edebe5}
+.pa-draft-window-header>img{width:24px;height:24px;object-fit:contain}
+.pa-draft-window-header>span:nth-child(2){font-weight:500}
+.pa-draft-badge{margin-left:auto;padding:3px 10px;border-radius:12px;background:#f2f0eb;color:#73716d;font-size:12px;line-height:18px}
+.pa-draft-window-fields{padding:16px 20px 8px}
+.pa-draft-window-fields>div{display:flex;align-items:center;gap:14px;min-height:32px;border-bottom:1px solid #f2f0eb}
+.pa-draft-window-fields>div>span:first-child{width:42px;flex:none;color:#73716d}
+.pa-draft-window-body{padding:20px;line-height:24px}
+.pa-draft-window-body p{margin:0 0 12px}
+.pa-draft-window-body p:last-child{margin-top:24px}
+@media(max-width:720px){.pa-draft-window{margin:16px auto}}

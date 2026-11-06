@@ -1,0 +1,27 @@
+/* Shared onboarding component styles. Keep illustrative surfaces and app chrome separate. */
+:root{
+ --go-selection-radius:12px;
+ --go-card-radius:20px;
+ --go-selection-border:#dedbd5;
+ --go-card-border:#edebe5;
+ --go-selection-fill:#faf8ff;
+ --go-accent:var(--origin-color-border-activated-accent,#714cb6);
+ --go-subdued:var(--origin-color-icon-base-subdued,#73716d);
+ --go-surface-shadow:0 1px 4px #1414130f;
+}
+.function-chip,.persona-options button{
+ border:1px solid var(--go-selection-border);
+ border-radius:var(--go-selection-radius);
+ background:#fff;box-shadow:var(--go-surface-shadow);
+ gap:8px;height:45px;font-size:16px;line-height:24px;
+ transition:border-color 160ms ease,background-color 160ms ease;
+}
+.function-chip.selected,.persona-options button[aria-pressed=true]{border-color:var(--go-accent);background:var(--go-selection-fill)}
+@media(hover:hover){
+ .function-chip:hover,.persona-options button:hover{border-color:#9c86c5;background:var(--go-selection-fill)}
+}
+.function-chip:has(input:focus-visible),.persona-options button:focus-visible{outline:2px solid var(--go-accent);outline-offset:3px}
+.function-icon,.persona-options button img{width:20px;height:20px;flex:none}
+.toolkit-tile,.persona-card,.profile-summary,.agent-card{border:1px solid var(--go-card-border);border-radius:var(--go-card-radius);box-shadow:var(--go-surface-shadow);background:#fff}
+.profile-card,.preview-panel.intro-static{border-radius:var(--go-card-radius)}
+@media(prefers-reduced-motion:reduce){.function-chip,.persona-options button{transition:none}}

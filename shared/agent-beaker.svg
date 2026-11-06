@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="custom-beaker">
+<path id="Beaker" fill-rule="evenodd" clip-rule="evenodd" d="M43.2019 8.8H40.0019V21L53.2738 45.8813C56.6835 52.2754 52.0482 59.9991 44.8019 60H19.2019C11.9546 60 7.31953 52.2759 10.73 45.8813L24.0019 21V8.8H20.8019V4H43.2019V8.8Z" fill="#D4C7FF"/>
+<g id="Lines">
+<path d="M35.1984 48H9.9C10.0875 47.2862 10.358 46.5753 10.7281 45.8812L12.1578 43.2H35.1984V48Z" fill="#421D24"/>
+<path d="M35.1984 37.6H15.1453L17.7063 32.8H35.1984V37.6Z" fill="#421D24"/>
+</g>
+</g>
+</svg>

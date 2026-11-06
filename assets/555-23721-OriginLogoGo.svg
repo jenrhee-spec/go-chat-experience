@@ -1,0 +1,23 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="origin_Logo/Go" filter="url(#filter0_d_0_175)">
+<g clip-path="url(#clip0_0_175)">
+<path id="Vector" d="M40.7858 19.6368C40.5328 16.4667 38.0103 13.9517 34.84 13.7027C31.2787 13.4306 27.7021 13.4306 24.137 13.714C20.9667 13.9633 18.4519 16.4858 18.2027 19.66C17.9305 23.2214 17.9305 26.7981 18.2142 30.3632C18.4672 33.5333 20.9897 36.0483 24.16 36.2973C27.7213 36.5694 31.2979 36.5694 34.863 36.286C38.0333 36.0329 40.5481 33.5105 40.7973 30.34C41.0695 26.7786 41.0695 23.2019 40.7858 19.6368Z" fill="#D4C7FF"/>
+<path id="Vector_2" d="M33.9081 32.4224L29.8791 30.214C29.6606 30.0953 29.3922 30.0953 29.1737 30.214L25.1447 32.4224C24.4969 32.7788 23.7877 32.0581 24.1634 31.4217L28.8977 23.3983C29.1776 22.9228 29.8753 22.9228 30.1551 23.3983L34.8933 31.4217C35.2651 32.0581 34.5598 32.7788 33.9081 32.4224Z" fill="#421D24"/>
+<path id="Vector_3" d="M31.8499 19.4794C31.8499 20.7601 30.811 21.7949 29.5268 21.7949C28.2464 21.7949 27.2076 20.7601 27.2076 19.4794C27.2076 18.2028 28.2464 17.1639 29.5268 17.1639C30.811 17.1639 31.8499 18.2028 31.8499 19.4794Z" fill="#421D24"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_0_175" x="0" y="4.76837e-07" width="59" height="59" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4.5"/>
+<feGaussianBlur stdDeviation="9"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.078431 0 0 0 0 0.078431 0 0 0 0 0.07451 0 0 0 0.06 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_175"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_175" result="shape"/>
+</filter>
+<clipPath id="clip0_0_175">
+<rect width="23" height="23" fill="white" transform="translate(18 13.5)"/>
+</clipPath>
+</defs>
+</svg>

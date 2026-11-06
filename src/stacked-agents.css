@@ -1,0 +1,44 @@
+.stacked-agents .card{position:absolute;left:-207px;top:-185.5px;border:0;background:transparent;padding:0;color:inherit;cursor:pointer;transform-origin:center;will-change:transform,width,height;margin-left:207px;margin-top:185.5px;translate:-50% -50%;text-align:center;touch-action:pan-y}
+.stacked-agents .surface{position:absolute;inset:0;background:#fff;border-radius:86px;pointer-events:none}
+.stacked-agents .mark{position:absolute;left:50%;top:50%;display:block;transform-origin:center;pointer-events:none}
+.stacked-agents .mark img{display:block;max-width:none}
+.stacked-agents .card-copy{position:absolute;top:calc(50% + 1.5px);left:50%;width:326px;display:flex;flex-direction:column;gap:8px;pointer-events:none}
+.stacked-agents .card-copy strong{font-size:20px;line-height:25px;font-weight:600}
+.stacked-agents .card-copy>span{font-size:18px;line-height:26px;font-weight:400}
+.stacked-agents .surface::before{content:"";position:absolute;inset:0;background:#fff;border-radius:inherit;mask-image:linear-gradient(to bottom,#000 75%,transparent 90%)}
+.stacked-agents .stacked-soft-bottom{position:absolute;inset:-30px;opacity:1;mask-image:linear-gradient(to bottom,transparent 55%,#000 70%);pointer-events:none}
+.stacked-agents .stacked-soft-bottom::before{content:"";position:absolute;inset:30px;background:#fff;border-radius:var(--card-radius,86px);filter:blur(var(--edge-blur,3px))}
+.stacked-agents .surface{box-shadow:none!important}
+.stacked-agents .surface::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:var(--card-shadow);filter:blur(calc(var(--edge-softness,0)*6px));pointer-events:none}
+.screen .figma-agents .stacked-agents{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;transform:none;transition:none}
+.screen .figma-agents .stacked-agents[data-ready=true]{opacity:1;transform:none}
+.stacked-carousel{position:absolute;left:50%;top:435px;transform:scale(.75);width:0;height:0;touch-action:pan-y;pointer-events:auto}
+.stacked-agents .mark img{width:103px;height:103px;object-fit:contain}
+.stacked-agents .card-copy strong{font-weight:400}
+.stacked-arrows{position:absolute;top:602px;left:50%;transform:translateX(-50%);display:flex;gap:20px;pointer-events:auto}
+.stacked-arrows button{width:51px;height:51px;border:0;border-radius:50%;background:white;box-shadow:0 1px 4px #1414130f;display:grid;place-items:center;cursor:pointer;color:#141413}
+.stacked-arrows svg{width:24px;height:24px}
+.stacked-agents button:focus-visible{outline:2px solid #714cb6;outline-offset:5px}
+.stacked-announcement{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.screen .figma-agents[data-ready=true][data-preview=false]>.agent-carousel{visibility:hidden;pointer-events:none}
+.screen .figma-agents[data-ready=true][data-preview=false]>.agent-tonal{opacity:0!important;transition:opacity 500ms ease}
+.native-window .screen .figma-agents[data-preview=false]{background:radial-gradient(ellipse at 50% 65%,#ede8f680,transparent 65%),#fcfaf8}
+@media(prefers-reduced-motion:reduce){.screen .figma-agents .stacked-agents{transform:none;transition:none}}
+
+/* Land the orbit in the stacked composition, without the old rectangular panel. */
+.screen .stacked-agent-flow[data-ready=false][data-preview=false]>.agent-tonal{animation:stacked-loading-background 3600ms both}
+.screen .stacked-agent-flow[data-ready=false][data-preview=false]>.agent-carousel{animation:none;transform:translate3d(-260px,-183px,0);background:transparent;box-shadow:none;overflow:visible}
+.screen .stacked-agent-flow[data-ready=false] .agent-personalizing{animation:stacked-loading-exit 3600ms both;clip-path:none;overflow:visible}
+.screen .stacked-agent-flow[data-ready=false] .stacked-agents{animation:stacked-loading-enter 3600ms both}
+.screen .stacked-agent-flow[data-ready=false] .agent-carousel-track,.screen .stacked-agent-flow[data-ready=false] .agent-carousel-details{visibility:hidden}
+@keyframes stacked-loading-background{0%,45%{opacity:1}100%{opacity:0}}
+@keyframes stacked-loading-exit{0%,62.5%{opacity:1}90%,100%{opacity:0}}
+@keyframes stacked-loading-enter{0%,66%{opacity:0}97%,100%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.screen .stacked-agent-flow[data-ready=false]>.agent-tonal,.screen .stacked-agent-flow[data-ready=false] .agent-personalizing{animation:none;opacity:0}.screen .stacked-agent-flow[data-ready=false] .stacked-agents{animation:none;opacity:1}}
+
+/* Hold the gradient artwork still and dissolve it across the entire canvas.
+   No resizing or clipping when loading switches to the completed cards. */
+.screen .figma-agents.stacked-agent-flow[data-preview=false]>.agent-tonal{left:0;top:0;width:1280px;height:832px;border-radius:0;clip-path:none;transition:none;animation-timing-function:cubic-bezier(.45,0,.25,1)}
+.screen .figma-agents.stacked-agent-flow[data-preview=false]>.agent-tonal .agent-tonal-art{width:2700px;animation:none;transition:none}
+.screen .figma-agents.stacked-agent-flow[data-preview=false]>.agent-tonal .agent-tonal-wash{animation:none;transition:none;opacity:1}
+.screen .figma-agents.stacked-agent-flow[data-ready=true][data-preview=false]>.agent-tonal{opacity:0!important;transition:none}

@@ -1,0 +1,19 @@
+{
+  "name": "go-chat-experience-prototype",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "assets": "node download-assets.mjs",
+    "build": "node build.mjs",
+    "serve": "python3 -m http.server 8054"
+  },
+  "dependencies": {
+    "@superhuman/origin": "1.22.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  }
+}

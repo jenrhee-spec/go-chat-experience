@@ -1,0 +1,15 @@
+/* Page treatment shared by the guided flow; artwork retains its own colors. */
+:root{--flow-page:#fcfaf8;--flow-copy-x:93px;--flow-copy-y:91px;--flow-copy-width:455px;--flow-action-gap:32px;--flow-text-duration:420ms;--flow-actions-delay:620ms}
+.native-window .screen :is(.welcome,.onboarding,.agent-carousel-screen,.post-agents,.personalize){background:var(--flow-page);background-image:none}
+.native-window .screen :is(.memory-onboarding,.connector-onboarding,.cards-variation,.integrated-personalize,.intro-onboarding)::before{display:none}
+.native-window .screen .onboarding:not(.connector-onboarding)>.copy{left:var(--flow-copy-x);top:var(--flow-copy-y);width:var(--flow-copy-width)}
+.native-window .screen :is(.copy h1,.agent-carousel-intro h1){font:400 28px/35px 'Go Sans',sans-serif;letter-spacing:0;margin:0}
+.native-window .screen :is(.copy h1 strong,.agent-carousel-intro h1 strong){font-weight:400;color:#141413}
+.native-window .screen .agent-carousel-intro{padding-top:30px}
+.native-window .screen :is(.copy .actions,.agent-carousel-actions){margin-top:var(--flow-action-gap);gap:16px;align-items:center;animation:content-settle var(--flow-text-duration) var(--motion-settle) var(--flow-actions-delay) both}
+.native-window .screen :is(.copy h1,.agent-carousel-intro h1) .motion-word{animation:word-resolve var(--flow-text-duration) var(--motion-settle) both;animation-delay:var(--word-delay,0ms)}
+.native-window .screen .agent-carousel-intro{--flow-actions-delay:920ms}
+.native-window .screen .agent-carousel-intro h1 .motion-word{animation-delay:calc(var(--word-delay,0ms) + 300ms)}
+.native-window .screen :is(.memory-frame,.connector-panel){background:#fff;box-shadow:var(--go-surface-shadow)}
+@media(prefers-reduced-motion:reduce){.native-window .screen :is(.copy .actions,.agent-carousel-actions),.native-window .screen :is(.copy h1,.agent-carousel-intro h1) .motion-word{animation:none;opacity:1;filter:none;transform:none}}
+.native-window .screen .agent-carousel-screen[data-ready=false] .agent-carousel-actions{animation:none}

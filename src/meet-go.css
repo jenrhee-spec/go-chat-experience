@@ -1,0 +1,31 @@
+.meet-go-story{position:absolute;left:603px;top:61px;width:600px;height:572px;overflow:clip;border-radius:20px;background:#4935a4;color:white;font-family:'Go Sans',sans-serif;isolation:isolate}
+.meet-go-tonal{position:absolute;inset:0;overflow:clip;z-index:-1}
+.meet-go-warm{position:absolute;width:2649px;height:2235px;left:-1695px;top:-1391px;max-width:none;transform:rotate(133.5deg) scaleY(-1);object-fit:cover}
+.meet-go-dark{position:absolute;width:3391px;height:2440px;left:-1820px;top:-1237px;max-width:none;object-fit:cover}
+.meet-go-pair{position:absolute;left:172px;top:241px}
+.meet-go-pair img{display:block;max-width:none}
+.meet-go-person{position:absolute;left:341px;top:240px;width:90px;height:97px;mask-position:3px 1px;mask-size:87px 87px;mask-repeat:no-repeat;z-index:2}
+.meet-go-person>img{width:90px;height:97px;object-fit:cover}
+.meet-go-context{position:absolute;inset:0;pointer-events:none}
+.meet-go-slack{position:absolute;left:123px;top:38px;width:454px}
+.meet-go-slack header{display:flex;align-items:center;gap:8px;margin-bottom:17px;font:400 14px/20px 'Go Sans',sans-serif}
+.meet-go-slack header>svg{width:22px;height:22px}.meet-go-slack header small{font-size:12px;opacity:.65;margin-left:5px}
+.meet-go-slack-row{display:flex;gap:10px;align-items:flex-start;margin-bottom:20px}
+.meet-go-slack-row>img{flex:none;max-width:none}
+.meet-go-slack-row strong{font:400 16px/24px 'Go Sans',sans-serif}
+.meet-go-slack-row p{margin:2px 0 0;font:300 16px/23px 'Go Sans',sans-serif;white-space:nowrap}
+.meet-go-mention{background:#8dcaf255;border-radius:5px;padding:2px 5px;font-size:13px}
+.meet-go-daniel{position:relative;width:40px;height:40px;flex:none;border-radius:12px;overflow:hidden;background:linear-gradient(#fdc298,#f2f0eb)}
+.meet-go-daniel img{position:absolute;width:120.5px;height:80.4px;max-width:none;left:-37px;top:-10px;object-fit:cover}
+.meet-go-calendar{position:absolute;left:7px;top:358px;width:259px;height:141px;border:1px solid white;border-radius:10px;background:#ffffff1a;padding:14px 20px}
+.meet-go-calendar>img{display:block;max-width:none}.meet-go-calendar h3{font:400 14px/21px 'Go Sans',sans-serif;margin:4px 0}
+.meet-go-calendar p{display:flex;align-items:center;gap:10px;font:300 12px/18px 'Go Sans',sans-serif;margin:0 0 7px}.meet-go-calendar p img{max-width:none}
+.meet-go-create{display:inline-block;padding:4px 9px;background:#f7f5ff;color:#141413;border-radius:8px;font:300 12px/18px 'Go Sans',sans-serif}
+.meet-go-email{position:absolute;left:348px;top:349px;width:375px;height:274px;padding:53px 24px 0 32px;border:1.2px solid white;border-radius:11px;background:#ffffff1a;mask-position:-2px -5px;mask-size:380.193px 293px;mask-repeat:no-repeat}
+.meet-go-email .meet-go-gmail{position:absolute;left:24px;top:15px;max-width:none}.meet-go-email p{font:300 15px/22.5px 'Go Sans',sans-serif;margin:0;width:327px}.meet-go-email-line{display:block;max-width:none;margin-top:4px}
+.meet-go-prompt{position:absolute;left:304px;top:452px;width:242px;height:67px;display:flex;align-items:center;justify-content:center;gap:8px;border:1.2px solid #fff;border-radius:19px;background:#ffffff0d;backdrop-filter:blur(45px);box-shadow:-12px 12px 72px #00000026;font:400 15.7px/23px 'Go Sans',sans-serif}.meet-go-prompt img{max-width:none}
+.meet-go-playback{position:absolute;left:16px;bottom:12px;display:flex;gap:4px;opacity:0;transition:opacity 220ms ease;pointer-events:none}
+.meet-go-story[data-controls=true] .meet-go-playback,.meet-go-story:hover .meet-go-playback,.meet-go-story:has(:focus-visible) .meet-go-playback{opacity:1;pointer-events:auto}
+.meet-go-playback button{width:44px;height:44px;display:grid;place-items:center;border:0;border-radius:50%;background:transparent;color:white;cursor:pointer}.meet-go-playback button:hover{background:#ffffff1a}.meet-go-playback button:focus-visible{outline:2px solid white}
+.meet-go-playback svg{width:22px;height:22px}.meet-go-playback svg,.meet-go-playback svg path{fill:white}
+@media(hover:none){.meet-go-playback{opacity:1;pointer-events:auto}}

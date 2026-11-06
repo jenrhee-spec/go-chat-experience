@@ -1,0 +1,245 @@
+.agent-carousel-screen{width:1280px;min-height:832px;display:grid;grid-template-columns:455px 600px;gap:55px;padding:61px 77px 100px 93px;background:#fcfaf8;font-family:'Go Sans',sans-serif;color:#141413;font-weight:300}
+.agent-carousel-intro{padding-top:30px}
+.agent-carousel-intro h1{margin:0;font:400 28px/35px 'Go Sans',sans-serif;letter-spacing:0}
+.agent-carousel-intro h1>span:not(.motion-word){display:block;color:#73716d}
+.agent-carousel-actions{display:flex;align-items:center;gap:16px;margin-top:32px}
+.agent-carousel{position:relative;width:600px;height:572px;overflow:hidden;border-radius:20px;background:#f2f0eb;box-shadow:0 1px 4px #1414130f;isolation:isolate;--carousel-duration:760ms;--carousel-ease:cubic-bezier(.22,.8,.25,1)}
+.agent-tonal{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:hidden}
+.agent-tonal-art{position:absolute;left:-394px;top:0;width:2095px;height:1058px;transform:scaleY(-1);overflow:hidden}
+.agent-tonal-art>img{position:absolute;left:-21.85%;top:-2.93%;width:121.99%;height:102.93%;max-width:none}
+.agent-tonal-wash{position:absolute;inset:0;background:linear-gradient(to top,transparent 2.91%,rgba(255,255,255,.9) 41.297%)}
+.agent-tonal-green{opacity:0}
+.agent-tonal-green .agent-tonal-art{height:832px}
+.agent-tonal-green .agent-tonal-art>.agent-green-art{left:-35.85%;top:-47.83%;width:171.7%;height:155.56%}
+.agent-tonal-green .agent-tonal-wash{background:linear-gradient(.1397deg,transparent 3.1969%,rgba(255,255,255,.9) 42.594%)}
+.agent-carousel[data-agent=grammarly] .agent-tonal-green{opacity:1}
+.agent-carousel-track{position:absolute;inset:0 0 auto;height:340px}
+.agent-carousel-tile{position:absolute;left:182px;top:70px;width:235px;height:247px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 30px;border:10px solid rgba(0,0,0,.06);border-radius:77px;background:#fff;background-clip:padding-box;color:#141413;cursor:pointer;font:300 18px/21px 'Go Sans',sans-serif;opacity:.28;transform:translate3d(0,0,0);transform-origin:50% 55%}
+.agent-carousel-tile[data-active=true]{opacity:1}
+.agent-carousel-icon{width:135px;height:135px;display:flex;align-items:center;justify-content:center;flex:none}
+.agent-carousel-icon img{display:block;max-width:none}
+.agent-carousel-tile[data-icon=knowledge] .agent-carousel-icon img{transform:scale(5)}
+.agent-carousel-name{width:135px;text-align:center;min-height:21px;font-weight:400;letter-spacing:0}
+.agent-carousel-details{position:absolute;top:358px;left:79.5px;width:441px;display:flex;flex-direction:column;align-items:center;gap:30px}
+.agent-carousel-dots{position:relative;width:57px;height:13px;display:flex;align-items:center;justify-content:space-between}
+.agent-carousel-dots button{position:relative;width:13px;height:13px;padding:0;border:0;border-radius:50%;background:var(--origin-neutral-20,#dedbd5);cursor:pointer;transition:background-color 180ms ease}
+.agent-carousel-dots button::before{content:'';position:absolute;inset:-8px -4px}
+.agent-carousel-descriptions{position:relative;width:100%;height:54px;transition:height 480ms cubic-bezier(.22,1,.36,1)}
+.agent-carousel-descriptions p{position:absolute;inset:0;margin:0;font:300 18px/27px 'Go Sans',sans-serif;text-align:center;opacity:0;transform:none;transition:opacity 160ms ease;pointer-events:none}
+.agent-carousel-descriptions p[data-active=true]{opacity:1;transform:translateY(0);transition:opacity 240ms ease 110ms}
+.agent-carousel button:focus-visible{outline:2px solid #714cb6;outline-offset:5px}
+@media(prefers-reduced-motion:reduce){.agent-carousel *{transition:none!important}.agent-carousel-descriptions p{transform:none}}
+
+/* Clipping must not scroll the surrounding scaled desktop when a control receives focus. */
+.desktop-stage:has(.agent-carousel-screen){overflow:clip}
+.agent-carousel{overflow:clip}
+
+
+/* The three persistent cards share one spring; no filter repaint or remount. */
+.agent-carousel[data-moving=true] .agent-carousel-tile{will-change:transform,opacity}
+.agent-carousel[data-instant=true] .agent-carousel-descriptions,.agent-carousel[data-instant=true] .agent-carousel-descriptions p{transition:none}
+
+/* Slow movement in the source textures; the white wash and content stay still. */
+.agent-tonal-art>img{animation:agent-gradient-drift 16s cubic-bezier(.45,0,.55,1) infinite alternate}
+@keyframes agent-gradient-drift{
+ from{transform:translate3d(-16px,6px,0) scale(1.01)}
+ to{transform:translate3d(24px,-12px,0) scale(1.025)}
+}
+.is-paused .agent-tonal-art>img{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.agent-tonal-art>img{animation:none}}
+
+/* The preview replaces the carousel inside the same anchored panel. */
+.agent-carousel-track,.agent-carousel-details{z-index:1;transition:opacity 220ms ease,transform 500ms cubic-bezier(.22,1,.36,1)}
+.agent-carousel[data-preview=true] .agent-carousel-track,.agent-carousel[data-preview=true] .agent-carousel-details{opacity:0;transform:translateY(-6px) scale(.98);pointer-events:none}
+.product-preview-background{position:absolute;inset:0;z-index:0;opacity:0;overflow:hidden;pointer-events:none;transition:opacity 650ms cubic-bezier(.4,0,.2,1)}
+.agent-carousel[data-preview=true] .product-preview-background{opacity:1}
+.product-preview-base{position:absolute;left:-3354px;top:-1617px;width:8015px;height:2189px;overflow:hidden}
+.product-preview-base>img{position:absolute;left:-21.85%;top:-2.93%;width:121.99%;height:102.93%;max-width:none}
+.product-preview-base>div{position:absolute;inset:0;background:linear-gradient(to top,transparent 2.91%,white 41.297%)}
+.product-preview-dark{position:absolute;left:-965px;top:-810px;width:3757px;height:2702px;max-width:none;object-fit:cover}
+.product-agent-preview{position:absolute;inset:0;z-index:2;color:white;opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity 180ms ease,transform 420ms cubic-bezier(.22,1,.36,1);font:300 14px/23px 'Go Sans',sans-serif}
+.agent-carousel[data-preview=true] .product-agent-preview{opacity:1;pointer-events:auto;transform:none;transition:opacity 350ms ease 230ms,transform 500ms cubic-bezier(.22,1,.36,1) 180ms}
+.product-preview-messages{position:absolute;left:128px;top:97px;width:345px;transform:scale(1.2);transform-origin:top center;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.product-preview-bubble{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:4px;padding:8px 12px;background:rgba(255,255,255,.05);border:1.2px solid rgba(255,255,255,.3);border-radius:11px}
+.product-preview-bubble p{margin:0;font:inherit;white-space:nowrap;color:white}
+.product-preview-identity{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.8)}
+.product-preview-identity img,.product-preview-result img,.product-preview-back img{display:block;max-width:none;flex:none}
+.product-preview-slack{width:345px;height:80px}
+.product-preview-github{width:269px;height:66px;padding-block:0}
+.product-preview-result{width:178px;height:57px;flex-direction:row;align-items:center;gap:8px;padding:0 8px;backdrop-filter:blur(45px);box-shadow:-12px 12px 72px rgba(0,0,0,.15)}
+@media(prefers-reduced-motion:reduce){.product-agent-preview,.agent-carousel[data-preview=true] .agent-carousel-track,.agent-carousel[data-preview=true] .agent-carousel-details{transform:none}}
+
+/* A single persistent control keeps its center, baseline, focus and interaction. */
+.agent-carousel-cta{position:absolute;top:485px;left:0;width:100%;height:44px;z-index:3;display:flex;justify-content:center;transition:opacity 300ms ease}
+.agent-preview-close{position:absolute;left:0;right:0;bottom:72px;height:44px;z-index:5;display:flex;justify-content:center}
+.agent-carousel-cta img{display:block;max-width:none}
+
+/* First arrival: a quiet personalization state, then the existing cards reveal. */
+.agent-personalizing{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:1;transition:opacity 220ms ease}
+.agent-personalizing-skeleton{position:absolute;left:182px;top:70px;width:235px;height:247px;border:10px solid rgba(0,0,0,.025);border-radius:77px;background:rgba(255,255,255,.7);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;animation:agent-personalizing-pulse 1200ms ease-in-out infinite alternate}
+.agent-personalizing-skeleton i{width:80px;height:80px;border-radius:26px;background:#e5dcf2}
+.agent-personalizing-skeleton span{width:104px;height:12px;border-radius:6px;background:#e5dcf2}
+.agent-personalizing p{position:absolute;top:358px;left:32px;right:32px;text-align:center;margin:0;font:300 18px/27px 'Go Sans',sans-serif;color:#73716d}
+.agent-carousel[data-ready=true] .agent-personalizing{opacity:0}
+.agent-carousel[data-ready=true] .agent-personalizing-skeleton{animation:none}
+.agent-carousel[data-ready=false] .agent-carousel-track{opacity:0;transform:translateY(14px) scale(.96);pointer-events:none}
+.agent-carousel[data-ready=false] .agent-carousel-details,.agent-carousel[data-ready=false] .agent-carousel-cta{opacity:0;pointer-events:none}
+.agent-carousel[data-ready=true]:not([data-preview=true]) .agent-carousel-track{transition:opacity 500ms ease 100ms,transform 650ms cubic-bezier(.22,1,.36,1) 100ms}
+@keyframes agent-personalizing-pulse{from{opacity:.45}to{opacity:.85}}
+@media(prefers-reduced-motion:reduce){
+ .agent-personalizing-skeleton{animation:none}
+ .agent-carousel[data-ready=false] .agent-carousel-track{transform:none}
+}
+
+/* Loading studies: icon-only candidates converge to the same final carousel. */
+.agent-loading-field{position:absolute;inset:0;perspective:850px;perspective-origin:50% 193px;transform-style:preserve-3d}
+.agent-loading-candidate{position:absolute;left:182px;top:70px;width:235px;height:247px;border:10px solid rgba(0,0,0,.06);border-radius:77px;background:#fff;background-clip:padding-box;display:grid;place-items:center;will-change:transform,opacity}
+.agent-loading-symbol{display:grid;place-items:center;transform:translateY(-12px)}
+.agent-loading-symbol>img{max-width:none;display:block}
+.agent-loading-candidate[data-kind="2"] img{transform:scale(5)}
+.agent-loading-candidate[data-kind=custom] img{width:100px;height:100px}
+.agent-loading-exploration p{top:401px;color:#73716d}
+.agent-carousel[data-ready=true] .agent-loading-exploration{visibility:hidden;transition:opacity 160ms ease,visibility 0s 180ms}
+/* The loader already lands at the final geometry; reveal labels without a second entrance. */
+.agent-carousel[data-ready=false] .agent-carousel-track{transform:none}
+.agent-carousel[data-ready=true]:not([data-preview=true]) .agent-carousel-track{transition:opacity 180ms ease}
+.agent-carousel[data-ready=false] .agent-carousel-name{opacity:0}
+.agent-carousel-name{transition:opacity 300ms ease 100ms}
+.agent-carousel[data-ready=true] .agent-loading-candidate{will-change:auto}
+@media(prefers-reduced-motion:reduce){.agent-loading-field{perspective:none}}
+
+
+/* The full-height dome resolves into the quieter, white-faded agent card. */
+.agent-loading-exploration[data-direction=dome] .agent-loading-field{perspective-origin:50% 286px}
+.agent-loading-exploration .agent-loading-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.agent-tonal-wash{transition:opacity 650ms cubic-bezier(.22,1,.36,1)}
+.agent-carousel[data-ready=false] .agent-tonal-wash{opacity:0}
+.agent-carousel[data-ready=true] .agent-tonal-wash{opacity:1}
+
+/* Opening takeover: hold a slow orbit, then fold into the right-hand card. */
+.agent-carousel-screen[data-ready=false] .agent-carousel{animation:agent-takeover 3200ms both}
+.agent-carousel-screen[data-ready=false] .agent-tonal-wash{animation:agent-takeover-wash 3200ms both}
+.agent-carousel-intro{opacity:1;transform:none;transition:opacity 200ms ease,transform 200ms ease}
+.agent-carousel-screen[data-ready=false] .agent-carousel-intro{opacity:0;transform:translateY(10px);pointer-events:none}
+.agent-loading-exploration[data-direction=dome] .agent-loading-field{perspective:1100px;perspective-origin:50% 320px}
+@keyframes agent-takeover{
+ 0%,62.5%{width:1110px;height:680px;transform:translateX(-510px)}
+ 97%,100%{width:600px;height:572px;transform:translateX(0)}
+ 62.5%{animation-timing-function:cubic-bezier(.4,0,.2,1)}
+}
+@keyframes agent-takeover-wash{
+ 0%,68%{opacity:0}
+ 100%{opacity:1}
+}
+@media(prefers-reduced-motion:reduce){
+ .agent-carousel-screen[data-ready=false] .agent-carousel,.agent-carousel-screen[data-ready=false] .agent-tonal-wash{animation:none}
+ .agent-carousel-intro{transition:none;transform:none!important}
+}
+.agent-carousel-screen[data-ready=false] .agent-tonal-art{animation:agent-takeover-texture 3200ms both}
+@keyframes agent-takeover-texture{0%,68%{width:2400px}97%,100%{width:2095px}62.5%{animation-timing-function:cubic-bezier(.4,0,.2,1)}}
+@media(prefers-reduced-motion:reduce){.agent-carousel-screen[data-ready=false] .agent-tonal-art{animation:none}}
+
+/* Reuse the onboarding word-by-word reveal after the dome settles. */
+.agent-carousel-intro{transition:none;transform:none!important}
+.agent-carousel-intro h1 .motion-word{display:inline-block;color:inherit}
+.agent-carousel-screen[data-ready=true] .agent-carousel-actions{animation:content-settle 460ms var(--motion-settle) 300ms both}
+
+/* A brief personalized preparation, then conversational typing and arrival. */
+.product-preview-working{position:absolute;inset:0 0 90px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+.product-preview-working>img{width:48px;height:48px}
+.product-preview-working p{font:300 18px/27px 'Go Sans',sans-serif;margin:0}
+.product-typing-dots{display:inline-flex;gap:5px;align-items:center;height:23px}
+.product-typing-dots i{width:4px;height:4px;border-radius:50%;background:currentColor;animation:product-typing-pulse 750ms ease-in-out infinite alternate}
+.product-typing-dots i:nth-child(2){animation-delay:120ms}
+.product-typing-dots i:nth-child(3){animation-delay:240ms}
+.product-preview-messages .product-preview-bubble{animation:product-message-arrive 300ms cubic-bezier(.22,1,.36,1) both}
+.product-typing-caret{display:inline-block;width:1px;height:13px;background:currentColor;margin-left:2px;vertical-align:-1px}
+@keyframes product-typing-pulse{from{opacity:.3;transform:translateY(1px)}to{opacity:1;transform:translateY(-2px)}}
+@keyframes product-message-arrive{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.product-typing-dots i,.product-preview-messages .product-preview-bubble{animation:none}}
+
+/* Starter agents owns the full-window gradient; the carousel is transparent. */
+.agent-carousel-screen{position:relative;isolation:isolate;background:#fcfaf8}
+.agent-carousel-screen>.agent-tonal{z-index:-1}
+.agent-carousel-screen>.agent-tonal .agent-tonal-art{width:2700px;animation:none}
+.agent-carousel-screen[data-ready=false]>.agent-tonal .agent-tonal-wash{opacity:1}
+.agent-carousel-screen[data-ready=true]>.agent-tonal .agent-tonal-wash{opacity:1}
+.agent-carousel-screen .agent-carousel{background:transparent;box-shadow:none}
+/* After personalization, restore the neutral layout and right-hand gradient card. */
+.agent-carousel-screen>.agent-tonal{inset:auto;left:0;top:0;width:1280px;height:832px;border-radius:0;transition:left 650ms cubic-bezier(.22,1,.36,1),top 650ms cubic-bezier(.22,1,.36,1),width 650ms cubic-bezier(.22,1,.36,1),height 650ms cubic-bezier(.22,1,.36,1),border-radius 650ms ease}
+.agent-carousel-screen[data-ready=true]>.agent-tonal{left:603px;top:61px;width:600px;height:572px;border-radius:20px}
+.agent-carousel-screen>.agent-tonal .agent-tonal-art{transition:width 650ms cubic-bezier(.22,1,.36,1)}
+.agent-carousel-screen[data-ready=true]>.agent-tonal .agent-tonal-art{width:2095px}
+
+/* Shared baseline for previous/next controls and neutral progress dots. */
+.agent-carousel-navigation{height:13px;display:flex;align-items:center;justify-content:center;gap:16px}
+.agent-carousel-arrow{width:32px;height:32px;border:0;padding:4px;display:grid;place-items:center;background:transparent;color:var(--origin-neutral-60,#73716d);border-radius:8px;cursor:pointer}
+.agent-carousel-arrow svg{width:24px;height:24px}
+.agent-carousel-arrow:hover{background:#14141308}
+.agent-carousel-arrow:active{background:#14141310}
+.agent-carousel-dots button[aria-selected=true]{background:var(--origin-neutral-60,#73716d)}
+
+/* A headline anchors the selection moment before the agents settle. */
+.agent-personalizing-headline{position:absolute;bottom:170px;left:32px;right:32px;margin:0;text-align:center;color:#141413;font:400 28px/35px 'Go Sans',sans-serif;z-index:4;pointer-events:none;animation:agent-personalizing-headline 3200ms both}
+@keyframes agent-personalizing-headline{0%{opacity:0;transform:translateY(8px)}5%,62.5%{opacity:1;transform:translateY(0)}82%,100%{opacity:0;transform:translateY(-4px)}}
+@media(prefers-reduced-motion:reduce){.agent-personalizing-headline{animation:none}}
+
+/* Contract the gradient alongside the dome, not after the loader disappears. */
+.agent-carousel-screen[data-ready=false]>.agent-tonal{animation:agent-gradient-settle 3200ms both}
+.agent-carousel-screen[data-ready=false]>.agent-tonal .agent-tonal-wash{animation:agent-gradient-wash 3200ms both}
+.agent-carousel-screen[data-ready=false]>.agent-tonal .agent-tonal-art{animation:agent-gradient-art 3200ms both}
+@keyframes agent-gradient-settle{0%,62.5%{left:0;top:0;width:1280px;height:832px;border-radius:0}62.5%{animation-timing-function:cubic-bezier(.4,0,.2,1)}100%{left:603px;top:61px;width:600px;height:572px;border-radius:20px}}
+@keyframes agent-gradient-wash{0%,62.5%{opacity:1}100%{opacity:1}}
+@keyframes agent-gradient-art{0%,62.5%{width:2700px}62.5%{animation-timing-function:cubic-bezier(.4,0,.2,1)}100%{width:2095px}}
+.agent-personalizing-headline span{display:inline-block;color:#141413;background:linear-gradient(100deg,#141413 0%,#141413 40%,#a9a6a0 48%,#eeeae4 50%,#a9a6a0 52%,#141413 60%,#141413 100%);background-size:250% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:agent-thinking-flash 1500ms linear infinite}
+@keyframes agent-thinking-flash{0%{background-position:100% 0}80%,100%{background-position:0% 0}}
+@media(prefers-reduced-motion:reduce){.agent-carousel-screen[data-ready=false]>.agent-tonal,.agent-carousel-screen[data-ready=false]>.agent-tonal .agent-tonal-wash,.agent-carousel-screen[data-ready=false]>.agent-tonal .agent-tonal-art,.agent-personalizing-headline span{animation:none}}
+
+/* White fades up behind the loading headline, starting at the lower agents. */
+.agent-personalizing-text-fade{position:absolute;inset:390px 0 0;z-index:3;pointer-events:none;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,.76) 48%,#fff 88%);animation:agent-personalizing-fade 3200ms both}
+@keyframes agent-personalizing-fade{0%{opacity:0}5%,62.5%{opacity:1}82%,100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.agent-personalizing-text-fade{animation:none}}
+
+@media(prefers-reduced-motion:reduce){.agent-personalizing-headline span{background:none;-webkit-text-fill-color:currentColor}}
+
+/* Keep the primary preview action centered at the bottom of the onboarding screen. */
+
+/* Lightweight, interactive document examples on the shared glass preview. */
+.writing-agent-preview{position:absolute;inset:36px 48px 104px;color:#fff}
+.writing-preview-doc,.writing-preview-suggestion{border:1px solid #ffffff4d;background:#ffffff0d;backdrop-filter:blur(20px);border-radius:14px;padding:20px 24px}
+.writing-preview-doc header{display:flex;align-items:center;gap:10px;font:400 18px/26px 'Go Sans',sans-serif}
+.writing-preview-doc header img{width:28px;height:28px;object-fit:contain}
+.writing-preview-doc header small{margin-left:auto;font-size:12px;opacity:.6}
+.writing-preview-doc h3{font:300 15px/22px 'Go Sans',sans-serif;color:#ffffffb3;margin:18px 0 10px}
+.writing-preview-doc p{font:300 18px/30px 'Go Sans',sans-serif;margin:0}
+.writing-preview-underline{display:inline;border:0;padding:0;background:transparent;color:inherit;font:inherit;text-decoration:underline;text-decoration-color:#d8c5ff;text-decoration-thickness:2px;text-underline-offset:5px;cursor:pointer}
+.writing-preview-underline[data-active=true]{background:#ceb2ff26;border-radius:3px}
+.writing-preview-underline:focus-visible{outline:2px solid white;outline-offset:3px}
+.writing-preview-applied{animation:writing-preview-accept 350ms ease-out}
+.writing-preview-doc{position:relative;z-index:0;margin-left:32px;min-height:320px;padding-bottom:80px}
+.writing-preview-suggestion{position:absolute;z-index:1;top:238px;left:0;right:24px;margin:0;padding:14px 20px;min-height:160px;background:#ffffff1f;box-shadow:0 14px 32px #22102d26}
+.writing-preview-suggestion header{display:flex;justify-content:space-between;font:300 12px/18px 'Go Sans',sans-serif;color:#ffffffb3}
+.writing-preview-suggestion h3{font:400 15px/22px 'Go Sans',sans-serif;margin:6px 0}
+.writing-preview-replacement{font:300 17px/25px 'Go Sans',sans-serif;margin:0 0 5px}
+.writing-preview-replacement del{opacity:.65}.writing-preview-replacement strong{font-weight:400;color:#ecdeff}
+.writing-preview-note{font:300 12px/18px 'Go Sans',sans-serif;margin:0 0 10px;color:#ffffffb3}
+.writing-preview-complete{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:145px;gap:8px}
+.writing-preview-complete svg{width:24px;height:24px;fill:white}
+.writing-preview-complete p{margin:0;font-size:17px}
+.writing-preview-complete button{border:0;background:transparent;color:white;font:inherit;text-decoration:underline;cursor:pointer}
+@keyframes writing-preview-accept{from{background:#d8c5ff66}to{background:transparent}}
+@media(prefers-reduced-motion:reduce){.writing-preview-applied{animation:none}}
+
+/* Figma 1273:40617: Blue 10 to Purple 10. */
+.agent-tonal-knowledge{opacity:0;background:linear-gradient(to bottom,var(--origin-blue-10,#daedfb),var(--origin-purple-10,#e8e0ff))}
+
+/* Keep the white reading fade in card coordinates, independent of art sizing. */
+.agent-tonal-knowledge::after,.agent-tonal-green::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,transparent 31px,rgba(255,255,255,.9) 437px)}
+.agent-tonal-green::after{background:linear-gradient(to bottom,transparent 31px,rgba(255,255,255,.96) 437px)}
+.agent-tonal-green .agent-tonal-wash{display:none}
+.prd-writing-preview .writing-preview-doc{overflow:hidden}
+.prd-writing-preview .writing-preview-doc .prd-writing-kicker{margin:18px 0 4px;font-size:10px;letter-spacing:.1em;color:#817d77}
+.prd-writing-preview .writing-preview-doc h4{margin:14px 0 3px;font-size:12px;line-height:16px;font-weight:600}
+.prd-writing-preview .writing-preview-doc h4+p{margin:0;font-size:12px;line-height:17px}
+.prd-writing-preview .prd-writing-context{align-self:flex-start}
+.prd-writing-preview .prd-writing-context>h3{font-size:14px;line-height:20px}

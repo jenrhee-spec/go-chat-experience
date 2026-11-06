@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="17.9444" height="17.9444" viewBox="0 0 17.9444 17.9444" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Gemini">
+<path id="Vector" d="M16.7338 8.98825C14.7938 9.10731 12.9642 9.93169 11.5898 11.3061C10.2154 12.6805 9.391 14.5101 9.27194 16.4501H9.24204C9.12318 14.51 8.29886 12.6803 6.92441 11.3059C5.54996 9.93143 3.72029 9.10711 1.78016 8.98825L1.78016 8.95834C3.72029 8.83948 5.54996 8.01517 6.92441 6.64072C8.29886 5.26627 9.12318 3.4366 9.24204 1.49647L9.27194 1.49647C9.391 3.43653 10.2154 5.26609 11.5898 6.6405C12.9642 8.0149 14.7938 8.83929 16.7338 8.95834V8.98825Z" fill="url(#paint0_radial_0_437)"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_0_437" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(3.26431 7.5742) rotate(18.6832) scale(15.9163 127.5)">
+<stop offset="0.067" stop-color="#9168C0"/>
+<stop offset="0.343" stop-color="#5684D1"/>
+<stop offset="0.672" stop-color="#1BA1E3"/>
+</radialGradient>
+</defs>
+</svg>

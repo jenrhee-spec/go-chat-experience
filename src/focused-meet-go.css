@@ -1,0 +1,70 @@
+.native-window .screen .onboarding.focused-meet-screen:not(.connector-onboarding)>.copy{left:var(--flow-copy-x);top:var(--flow-copy-y);width:var(--flow-copy-width)}
+.morph-stage{position:absolute;left:630px;top:91px;width:600px;height:572px;border-radius:20px;overflow:clip;isolation:isolate;background:#5133a8;color:white;font-family:'Go Sans',sans-serif}
+.morph-gradient{position:absolute;left:-1824px;top:-1237px;width:3391px;height:2440px;max-width:none;object-fit:cover;pointer-events:none;z-index:-1}
+.morph-document{position:absolute;left:-397px;top:-17px;width:1269px;font:400 71.64px/69.65px 'Go Serif',Georgia,serif;color:#281647;opacity:.5;pointer-events:none}
+.morph-document u{position:relative;display:inline-block;white-space:nowrap;text-decoration:none;padding-bottom:5px;background:none}
+.morph-document u::after{content:'';position:absolute;left:0;right:0;bottom:0;height:4px;background:#f6aadd;transform:scaleX(var(--underline-progress,1));transform-origin:left;pointer-events:none}
+
+.morph-glass{position:absolute;border:1.069px solid #ffffff44;border-radius:17px;background:linear-gradient(#ffffff1c,#ffffff14);backdrop-filter:blur(21.385px);box-shadow:0 12px 32px #20102724,0 2px 8px #20102718;overflow:clip}
+.morph-inline{position:absolute;inset:0;padding:30px 24px;color:white}
+.morph-inline header{display:flex;gap:8px;align-items:center;height:35px;margin-bottom:18px}
+.morph-inline header img{width:25.955px;height:25.955px;margin:0 6px}
+.morph-inline strong{font-size:20px;line-height:30px;font-weight:600}
+.morph-inline p{font-size:19.5px;line-height:27px;white-space:nowrap;margin:0 0 12px}
+.morph-inline footer{display:flex;gap:10px}
+.morph-inline footer button{color:white;background:transparent}
+.morph-inline footer button:first-child{background:#ffffff1c}
+.morph-cue{position:absolute;left:0;top:0;width:56.875px;height:56.875px;background:white;border:.889px solid #dedbd5;border-radius:21.328px;display:grid;place-items:center;transform-origin:top left}
+.morph-cue img{width:28.438px;height:28.438px}
+.morph-panel{position:absolute;inset:0;color:white}
+.morph-prompts{position:absolute;left:15px;right:15px;bottom:138px}
+.morph-prompts h2{font-size:16.88px;line-height:20px;font-weight:400;margin:0;padding:15px 11px}
+.morph-prompts button,.morph-prompt-row{display:flex;align-items:center;gap:9px;width:100%;height:42px;padding:0 12px;border:0;border-radius:11px;background:transparent;color:white;font:400 13.132px/20px 'Go Sans',sans-serif;text-align:left;white-space:nowrap;cursor:pointer}
+.morph-prompts button img{flex:none;max-width:none}
+.morph-messaging img{width:18.76px;height:18.76px}
+.morph-prompt-row:last-child img{width:15px;height:15px;margin:0 2px}
+.morph-prompts button:hover,.morph-prompts button[data-highlight=true]{background:#ffffff1a}
+.morph-prompts button:focus-visible{outline:2px solid white;outline-offset:-2px}
+.morph-composer{position:absolute;bottom:22px;left:11px;width:293px;height:89px;border:1px solid #ffffff33;border-radius:17px;background:linear-gradient(#ffffff1c,#ffffff14);box-shadow:0 0 10px #00000030;padding:12px 10px;font-size:13px}
+.morph-attachment{display:flex;width:132px;gap:7px;align-items:center;border:1px solid #ffffff30;background:#ffffff12;border-radius:14px;font-size:10px;padding:5px 8px;margin-bottom:5px}
+.morph-attachment svg{width:12px;height:12px;fill:#68a6ff}
+.morph-composer>div{display:flex;align-items:center;justify-content:space-between}
+.morph-composer>div img{max-width:none}
+.morph-conversation{position:absolute;left:22px;right:22px;top:112px;font-size:15px;line-height:22px}
+.morph-user{padding:12px 14px;background:#ffffff20;border:1px solid #ffffff25;border-radius:14px 14px 4px 14px;margin-left:18px;margin-bottom:26px}
+.morph-reply p{margin:0 0 16px}.morph-rewrite{padding:14px;border-radius:12px;background:#ffffff12;border:1px solid #ffffff20;font-size:17px;line-height:25px}
+.morph-cursor{position:absolute;left:0;top:0;pointer-events:none;filter:drop-shadow(0 2px 3px #00000030)}
+.morph-controls{position:absolute;left:12px;bottom:10px;display:flex;gap:4px;opacity:0;transition:opacity 180ms}
+.morph-stage:hover .morph-controls,.morph-stage:has(:focus-visible) .morph-controls{opacity:1}
+.morph-controls button{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:0;background:#51274166;color:white;cursor:pointer;font-size:20px}
+.morph-controls button:disabled{opacity:.4;cursor:default}.morph-controls svg{width:19px;height:19px}.morph-controls svg path{fill:white}.morph-controls button:focus-visible{outline:2px solid white;outline-offset:2px}
+@media(hover:none){.morph-controls{opacity:1}}
+@media(prefers-reduced-motion:reduce){.morph-controls{transition:none}}
+
+/* Chat has a right-aligned user bubble and an unboxed, attributed Go reply. */
+.morph-conversation{top:104px;font-size:15px;line-height:22px}
+.morph-user{margin-left:30px;margin-bottom:20px;background:#ffffff24;border-color:#ffffff30}
+.morph-reply header{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:500;margin-bottom:12px}
+.morph-reply header img{width:15.0081px;height:15.0081px}
+.morph-reply p{margin:0 0 14px}
+.morph-reply .morph-rewrite{background:none;border:0;border-left:2px solid #ffffff50;border-radius:0;padding:0 0 0 12px;font-size:15px;line-height:23px}
+.morph-typing{display:flex;align-items:center;gap:5px;height:22px}
+.morph-typing i{display:block;width:5px;height:5px;border-radius:50%;background:white}
+
+/* Two distinct, stationary documents crossfade with the shared Go surface. */
+.morph-document-shade{position:absolute;inset:0;background:#281647;pointer-events:none}
+.morph-document-short{left:50px;top:53px;width:497px;font-size:53.925px;line-height:52.427px}
+.morph-document-short u{padding-bottom:3px}
+.morph-document-short u::after{height:3px;bottom:0}
+.morph-document-marine{position:absolute;left:-168.69px;top:-270.5px;width:836px;font:360 50.734px/1 'Go Sans',sans-serif;letter-spacing:.5073px;color:#857dfa;pointer-events:none}
+.morph-document-marine u{text-decoration-color:#da7cb4;text-decoration-thickness:2.5px;text-decoration-skip-ink:none;text-underline-offset:5px}
+.morph-inline{padding:26px 22px}
+.morph-inline header{margin-bottom:15px;height:32px}
+.morph-inline strong{font-size:18.486px;line-height:27.525px}
+.morph-inline p{font-size:17.986px;line-height:25.18px;margin-bottom:13px}
+
+/* Detection follows the document entrance and its underline reveal. */
+.morph-document-marine u{text-decoration:none;background-image:linear-gradient(#da7cb4,#da7cb4);background-repeat:no-repeat;background-position:left bottom;box-decoration-break:clone;-webkit-box-decoration-break:clone;padding-bottom:4px}
+.morph-attachment{height:27px;overflow:clip;white-space:nowrap;box-sizing:border-box;flex-shrink:0}
+.morph-attachment svg{flex:0 0 12px}
+.morph-attachment>span{display:block;flex-shrink:0;white-space:nowrap;font-size:10px;line-height:15px}

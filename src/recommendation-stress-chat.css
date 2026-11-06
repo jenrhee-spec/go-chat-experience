@@ -1,0 +1,48 @@
+.pa-stress-chat .pa-conversation{padding-top:32px}
+.pa-stress-chat .pa-sidebar nav h2{margin-top:8px}
+.pa-stress-chat .pa-sidebar nav button img{object-fit:contain}
+.pa-stress-chat .pa-stress-turn{margin:0 0 26px}
+.pa-stress-chat .pa-stress-turn .pa-home-greeting{font:400 14px/21px 'Go Sans',sans-serif;margin:0 0 16px}
+.pa-stress-chat .pa-stress-turn .pa-setup-response{margin:0 0 14px!important;max-width:570px}
+.pa-stress-chat .pa-stress-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.pa-stress-chat .pa-stress-confirm{font:400 12px/18px 'Go Sans',sans-serif;color:#73716d;margin:9px 0 0}
+.pa-stress-chat .pa-stress-lineup{list-style:disc;padding:0 0 0 20px;margin:0 0 18px;width:570px;max-width:100%}
+.pa-stress-chat .pa-stress-lineup li{display:list-item;padding:0;margin:0 0 8px;font:400 14px/21px 'Go Sans',sans-serif}
+.pa-stress-chat .pa-stress-lineup li::marker{color:#73716d}
+.pa-stress-chat .pa-stress-lineup strong{font-weight:500}
+.pa-stress-chat .pa-stress-example-label{color:#73716d;font:400 12px/18px 'Go Sans',sans-serif;margin:0 0 10px}
+.pa-stress-chat .pa-stress-detail{color:#73716d;font:400 12px/18px 'Go Sans',sans-serif;margin:0 0 8px}
+.pa-stress-chat .pa-stress-body{white-space:pre-line;font:400 14px/22px 'Go Sans',sans-serif;margin:0 0 16px;max-width:570px}
+.pa-stress-chat .pa-stress-next-agent{margin-top:12px}
+.pa-stress-chat .pa-composer input{font:400 14px/21px 'Go Sans',sans-serif}
+.pa-stress-chat .pa-agent-questionnaire-wrap{margin:18px 0 22px}
+.pa-stress-chat .pa-agent-questionnaire{background:#fff;border:1px solid #e8e5df;border-radius:18px;box-shadow:0 1px 4px #4745430d;padding:20px 22px 18px;width:100%}
+.pa-stress-chat .pa-agent-questionnaire header{display:flex;align-items:flex-start;gap:12px;margin:0 0 8px}
+.pa-stress-chat .pa-agent-questionnaire h2{font:500 16px/22px 'Go Sans',sans-serif;flex:1;margin:0}
+.pa-stress-chat .pa-agent-questionnaire nav{display:flex;align-items:center;gap:8px;color:#73716d;font:400 13px/20px 'Go Sans',sans-serif;white-space:nowrap}
+.pa-stress-chat .pa-agent-questionnaire nav button{width:20px;height:22px;display:grid;place-items:center;border:0;background:none;color:#73716d;padding:0}
+.pa-stress-chat .pa-agent-questionnaire nav button:disabled{opacity:.35;cursor:default}
+.pa-stress-chat .pa-agent-questionnaire nav svg{width:16px;height:16px}
+.pa-stress-chat .pa-agent-questionnaire-hint{font:400 12px/18px 'Go Sans',sans-serif;color:#73716d;margin:0 0 16px}
+.pa-stress-chat .pa-agent-questionnaire-options{display:grid;gap:14px;margin:0 0 20px}
+.pa-stress-chat .pa-agent-questionnaire-options label{display:flex;align-items:center;gap:10px;cursor:pointer;font:400 14px/21px 'Go Sans',sans-serif}
+.pa-stress-chat .pa-agent-questionnaire-options input{appearance:none;flex:none;width:18px;height:18px;border:1.5px solid #85827e;border-radius:50%;margin:0;display:grid;place-items:center}
+.pa-stress-chat .pa-agent-questionnaire-options input:checked{border-color:#714cb6;background:#714cb6}
+.pa-stress-chat .pa-agent-questionnaire-options input:checked:after{content:'';width:6px;height:6px;border-radius:50%;background:white}
+.pa-stress-chat .pa-agent-questionnaire-options input[type=checkbox]:checked:after{width:7px;height:4px;border-radius:0;border-left:1.5px solid white;border-bottom:1.5px solid white;background:none;transform:rotate(-45deg) translateY(-1px)}
+.pa-stress-chat .pa-agent-questionnaire footer{display:flex;align-items:center;justify-content:flex-end}
+.pa-stress-chat .pa-agent-questionnaire footer>div{display:flex;gap:8px}
+.pa-stress-chat .pa-stress-config-summary{padding-left:20px;margin:0 0 14px;font:400 14px/21px 'Go Sans',sans-serif}
+.pa-stress-chat .pa-stress-config-summary li{display:list-item;margin-bottom:3px}
+.pa-stress-chat .pa-stress-email-setup{margin-top:12px;padding:16px 20px;max-width:570px}
+.pa-stress-chat .pa-stress-email-setup:first-of-type{margin-top:0}
+.pa-stress-chat .pa-stress-email-setup h2{padding:0;margin:0 0 10px;font:500 14px/21px 'Go Sans',sans-serif}
+.pa-stress-chat .pa-stress-email-setup .pa-stress-config-summary{margin-bottom:10px}
+.pa-stress-chat .pa-stress-email-setup>p{color:#73716d;font:400 12px/18px 'Go Sans',sans-serif;margin:0}
+.pa-stress-chat .pa-stress-created{font:400 15px/24px 'Go Sans',sans-serif;max-width:570px;margin:0 0 12px}
+.pa-stress-chat .pa-stress-created a{color:#0879b9;text-decoration:underline;text-underline-offset:2px}
+.pa-stress-chat .pa-stress-settings-link{font:400 14px/21px 'Go Sans',sans-serif;margin:0 0 12px}
+.pa-stress-chat .pa-stress-settings-link a{color:#0879b9;text-decoration:underline;text-underline-offset:2px}
+.pa-stress-chat .pa-stress-agent-bullet{display:list-item;padding:0;margin:0 0 8px;font:400 14px/21px 'Go Sans',sans-serif}
+.pa-stress-chat .pa-stress-agent-bullet strong{font-weight:500}
+.pa-stress-chat .pa-stress-typing-caret{display:inline-block;width:2px;height:14px;margin-left:2px;background:#73716d;vertical-align:-2px}
